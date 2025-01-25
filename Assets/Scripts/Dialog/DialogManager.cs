@@ -1,6 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class DialogManager : MonoBehaviour, IPointerClickHandler
 {
@@ -8,6 +10,12 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
     [SerializeField] private DialogData _dialogDataTest;
     [SerializeField] private Image _finishCursor;
     DialogData _currentDialog;
+    [SerializeField]
+    private CanvasGroup _choices;
+    [SerializeField]
+    TextMeshProUGUI _firstChoice;
+    [SerializeField]
+    TextMeshProUGUI _secondChoice;
 
     private DialogBubble _dialogBubble;
 
@@ -17,10 +25,23 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
     {
         _dialogBubble = GetComponentInChildren<DialogBubble>();
         _dialogBubble.OnDialogFinished += OnDialogFinished;
+        _choices.alpha = 0;
+        _choices.interactable = false;
+        
         if (_dialogDataTest != null)
         {
-            LaunchDialog(_dialogDataTest);            
+            LaunchDialog(_dialogDataTest);    
         }
+    }
+
+    public void OnFirstChoice()
+    {
+        LaunchDialog(_currentDialog.Dialogs[_currentIndex].choices[0].response);
+    }
+    
+    public void OnSecondChoice()
+    {
+        LaunchDialog(_currentDialog.Dialogs[_currentIndex].choices[1].response);
     }
 
     public void LaunchDialog(DialogData dialogData)
@@ -29,27 +50,39 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
         _currentDialog = dialogData;
         _currentIndex = 0;
 
-        _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex]);
+        _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message);
     }
 
     void OnDialogFinished()
     {
-        _finishCursor.color = Color.blue;
+        if (_currentDialog.Dialogs[_currentIndex].hasChoice)
+        {
+            _firstChoice.text = _currentDialog.Dialogs[_currentIndex].choices[0].message;
+            _secondChoice.text = _currentDialog.Dialogs[_currentIndex].choices[1].message;
+            _choices.DOFade(1, 0.8f).OnComplete(() => {_choices.interactable = true;});
+        }
+        else
+        {
+            _finishCursor.color = Color.blue;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (_currentDialog != null)
+        if (_currentDialog != null && !_currentDialog.Dialogs[_currentIndex].hasChoice)
         {
             if (_dialogBubble.IsTweening)
             {
+                _dialogBubble.SkipTextTyping();
                 return;
             }
+            _choices.alpha = 0;
+            _choices.interactable = false;
             _finishCursor.color = Color.clear;
             _currentIndex++;
             if (_currentIndex < _currentDialog.Dialogs.Count)
             {
-                _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex]);
+                _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message);
             }
         }
     }

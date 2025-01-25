@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
+  m_Name: DialogTuto
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _Dialogs:
+  - speaker: 1
+    message: Good evening. Is this caravan yours?
+    hasChoice: 0
+    choices:
+    - message: 
+      response: {fileID: 0}
+  - speaker: 0
+    message: Good evening! Yes it is, in my family for decades.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: That's good, that's good... Making bubble tea is an art that is being
+      lost these days.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: That's true.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Correct me if I'm wrong, but you're here to help the poor soldiers who
+      are fighting for our country?
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Exactly. I came, like my parents, and all my ancestors before me, to
+      support the war effort, and boost the morale of our troops. In my own way.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: And I respect you for that. When did you take over the family business?
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Three years ago. Why?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Don't take this the wrong way, but you're not the first bubble tea caravan
+      I've come across in my life... Yes, I've been around the block on this planet.
+      And unfortunately, this isn't my first war.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: What are you getting at, dear sir?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: 'You''re right, I might as well get straight to the point: I would like
+      to order a bubble tea, to warm my heart, but especially to check that you are
+      not going to offer drinks that will further demoralize our soldiers'
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: You don't mince your words... But you are right. What would you like?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Take your time, and make me a "DRINK", please.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Right away, sir!
+    hasChoice: 0
+    choices: []
