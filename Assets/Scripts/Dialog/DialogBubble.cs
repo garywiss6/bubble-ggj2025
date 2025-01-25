@@ -24,11 +24,20 @@ public class DialogBubble : MonoBehaviour
         }
     }
 
+    public void SkipTextTyping()
+    {
+        if (_currentTween != null)
+        {
+            _currentTween.Complete();
+            _currentTween = null;
+        }
+    }
+
     public void ShowText(string text)
     {
         if (_currentTween != null)
             _currentTween.Kill();
         _DialogText.text = "";
-        _currentTween = _DialogText.DOText(text, 1.0f).OnComplete(() => { _onDialogFinished?.Invoke(); });
+        _currentTween = _DialogText.DOText(text, 1.0f).OnComplete(() => { _onDialogFinished?.Invoke();_currentTween = null; });
     }
 }
