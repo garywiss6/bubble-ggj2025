@@ -1,5 +1,4 @@
 using UnityEngine;
-using Sirenix.OdinInspector;
 using DG.Tweening;
 
 public class Move : UIBehaviour
