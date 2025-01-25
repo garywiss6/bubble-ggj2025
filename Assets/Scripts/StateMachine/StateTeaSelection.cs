@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class StateBubbleSelection : AState
+public class StateTeaSelection : AState
 {
     public override void OnEnter()
     {
         base.OnEnter();
-        IngredientBench.Instance.PopulateBubble();
+        IngredientBench.Instance.PopulateTea();
         BubbleTeaManager.Instance.onAddIngredient += OnAddIngredient;
     }
 
@@ -18,6 +18,6 @@ public class StateBubbleSelection : AState
 
     private void OnAddIngredient(IngredientData ingredient)
     {
-        StateManager.Instance.ChangeState(new StateTeaSelection());
+        StateManager.Instance.ChangeState(new StateLiquidSelection());
     }
 }

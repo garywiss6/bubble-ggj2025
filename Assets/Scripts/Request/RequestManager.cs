@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RequestManager : SingletonBehaviour<RequestManager>
 {
-    [SerializeField] private RequestData _request;
+    private RequestData _request;
     public event DelegateDefinition.void_D_Request onAddRequest;
 
     public void AddRequest(RequestData request)

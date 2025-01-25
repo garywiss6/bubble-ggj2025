@@ -5,14 +5,14 @@ public class StateExtraSelection : AState
     public override void OnEnter()
     {
         base.OnEnter();
-        //Show Extra MiniGame Here
+        IngredientBench.Instance.PopulateExtra();
         BubbleTeaManager.Instance.onAddIngredient += OnAddIngredient;
     }
 
     public override void OnExit()
     {
         base.OnExit();
-        //Hide Extra MiniGame Here
+        IngredientBench.Instance.Hide();
         BubbleTeaManager.Instance.onAddIngredient -= OnAddIngredient;
     }
 

@@ -5,14 +5,14 @@ public class StateLiquidSelection : AState
     public override void OnEnter()
     {
         base.OnEnter();
-        //Show Liquid MiniGame Here
+        IngredientBench.Instance.PopulateLiquid();
         BubbleTeaManager.Instance.onAddIngredient += OnAddIngredient;
     }
 
     public override void OnExit()
     {
         base.OnExit();
-        //Hide Liquid MiniGame Here
+        IngredientBench.Instance.Hide();
         BubbleTeaManager.Instance.onAddIngredient -= OnAddIngredient;
     }
 
