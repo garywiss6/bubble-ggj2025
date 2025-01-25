@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -7,24 +8,23 @@ public class BubbleTeaManager : SingletonBehaviour<BubbleTeaManager>
     [SerializeField] private TextMeshProUGUI _debugText;
     public event DelegateDefinition.void_D_Ingredient onAddIngredient;
     private BubbleTea _bubbleTea;
-
-    private void Awake()
+    public BubbleTea BubbleTea => _bubbleTea;
+    public void PopulateBubble()
     {
-        CreateNewBubbleTea();
     }
 
     public void AddIngredient(IngredientData ingredient)
     {
-        onAddIngredient?.Invoke(ingredient);
         if (_bubbleTea != null)
         {
-            _bubbleTea.TryAddIngredient(ingredient);
+            if (_bubbleTea.TryAddIngredient(ingredient))
+                onAddIngredient?.Invoke(ingredient);
             _debugText.text = _bubbleTea.ToString();
         }
     }
 
-    public void CreateNewBubbleTea()
+    public void CreateNewBubbleTea(CupSize size)
     {
-        _bubbleTea = new BubbleTea(_config);
+        _bubbleTea = new BubbleTea(_config,size);
     }
 }
