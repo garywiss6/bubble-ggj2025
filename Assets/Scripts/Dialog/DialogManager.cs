@@ -6,7 +6,8 @@ using DG.Tweening;
 
 public class DialogManager : MonoBehaviour, IPointerClickHandler
 {
-    
+    static private DialogManager _instance;
+    static public DialogManager Instance => _instance;
     [SerializeField] private DialogData _dialogDataTest;
     [SerializeField] private Image _finishCursor;
     DialogData _currentDialog;
@@ -20,11 +21,29 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
     private DialogBubble _dialogBubble;
 
     private int _currentIndex = 0;
+
+    private DelegateDefinition.void_D_void _onDialogFinished;
+    public DelegateDefinition.void_D_void OnDialogFinished
+    {
+        get
+        {
+            return _onDialogFinished;
+        }
+        set
+        {
+            _onDialogFinished = value;
+        }
+    }
+
+    void Awake()
+    {
+        _instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _dialogBubble = GetComponentInChildren<DialogBubble>();
-        _dialogBubble.OnDialogFinished += OnDialogFinished;
+        _dialogBubble.OnDialogFinished += OnTextFinished;
         _choices.alpha = 0;
         _choices.interactable = false;
         
@@ -50,10 +69,10 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
         _currentDialog = dialogData;
         _currentIndex = 0;
 
-        _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message);
+        _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message, _currentDialog.Dialogs[_currentIndex].speaker);
     }
 
-    void OnDialogFinished()
+    void OnTextFinished()
     {
         if (_currentDialog.Dialogs[_currentIndex].hasChoice)
         {
@@ -69,7 +88,7 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (_currentDialog != null && !_currentDialog.Dialogs[_currentIndex].hasChoice)
+        if (_currentDialog != null && _currentIndex < _currentDialog.Dialogs.Count && !_currentDialog.Dialogs[_currentIndex].hasChoice)
         {
             if (_dialogBubble.IsTweening)
             {
@@ -82,7 +101,11 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
             _currentIndex++;
             if (_currentIndex < _currentDialog.Dialogs.Count)
             {
-                _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message);
+                _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message, _currentDialog.Dialogs[_currentIndex].speaker);
+            }
+            else
+            {
+                _onDialogFinished?.Invoke();
             }
         }
     }

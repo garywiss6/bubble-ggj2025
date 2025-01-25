@@ -4,7 +4,7 @@ public class StateManager : SingletonBehaviour<StateManager>
 {
     private AState _currentState;
 
-    private void Awake()
+    private void Start()
     {
         ChangeState(new StateClientArrival());
     }
