@@ -14,5 +14,8 @@ public class StateStraw : AState
         //Hide Straw MiniGame Here
     }
 
-
+    private void OnStrawPut()
+    {
+        StateManager.Instance.ChangeState(new StateGiveBubbleTea());
+    }
 }

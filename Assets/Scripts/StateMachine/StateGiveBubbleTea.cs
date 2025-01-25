@@ -8,6 +8,7 @@ public class StateGiveBubbleTea : AState
         //Play fill anim on customer
         BubbleTea bubbleTea = BubbleTeaManager.Instance.BubbleTea;
         bool answerRequest = RequestManager.Instance.SendBubbleTea(bubbleTea);
+        StateManager.Instance.ChangeState(new StateClientArrival());
     }
 
     public override void OnExit()
