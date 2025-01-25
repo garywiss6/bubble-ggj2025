@@ -7,15 +7,19 @@ public class StateClientArrival : AState
         base.OnEnter();
         //Anim arrivé client
         //Dialogue
-        ClientManager.Instance.OnClientFinishWelcome += OnExit;
+        ClientManager.Instance.OnClientFinishWelcome += OnClientFinished;
         ClientManager.Instance.EnterClient();
 
     }
 
+    void OnClientFinished()
+    {
+        ClientManager.Instance.OnClientFinishWelcome -= OnClientFinished;
+        StateManager.Instance.ChangeState(new StateCupSelection());
+    }
+
     public override void OnExit()
     {
-        ClientManager.Instance.OnClientFinishWelcome -= OnExit;
-        StateManager.Instance.ChangeState(new StateCupSelection());
         base.OnExit();
     }
 }

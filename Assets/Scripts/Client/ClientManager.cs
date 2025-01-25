@@ -43,13 +43,20 @@ public class ClientManager : MonoBehaviour
     {
         _Renderer.transform.DOMoveX(5.5f, 1.0f).OnComplete(() =>
         {
+            DialogManager.Instance.OnDialogFinished += OnDialogFinished;
             DialogManager.Instance.LaunchDialog(CurrentClient.WelcomeDialog);
         });
         //Mettre une sinusoide sur le Y
     }
+
+    void OnDialogFinished()
+    {
+        OnClientFinishWelcome?.Invoke();
+    }
     
     public void ExitClient()
     {
+        DialogManager.Instance.OnDialogFinished -= OnDialogFinished;
         _Renderer.transform.DOMoveX(12f, 1.0f);
         _CurrentClient++;
     }
