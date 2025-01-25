@@ -83,7 +83,3 @@ MonoBehaviour:
     message: Take your time, and make me a "DRINK", please.
     hasChoice: 0
     choices: []
-  - speaker: 0
-    message: Right away, sir!
-    hasChoice: 0
-    choices: []

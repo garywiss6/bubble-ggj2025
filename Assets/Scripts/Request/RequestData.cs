@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "RequestData", menuName = "Data/RequestData")]
 public class RequestData : ScriptableObject
 {
     [SerializeField, Range(0, 100)] private float _exigence;

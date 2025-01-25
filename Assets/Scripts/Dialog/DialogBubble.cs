@@ -38,6 +38,8 @@ public class DialogBubble : MonoBehaviour
         if (_currentTween != null)
             _currentTween.Kill();
         _DialogText.text = "";
-        _currentTween = _DialogText.DOText(text, 1.0f).OnComplete(() => { _onDialogFinished?.Invoke();_currentTween = null; });
+        _currentTween = _DialogText.DOText(text, 10.0f)
+            .SetSpeedBased(true)
+            .OnComplete(() => { _onDialogFinished?.Invoke();_currentTween = null; });
     }
 }
