@@ -6,6 +6,8 @@ public class StateStraw : AState
     {
         base.OnEnter();
         //Show Straw MiniGame Here
+        BubbleTeaManager.Instance.BubbleTea.AddStraw();
+        OnStrawPut(); // Ligne de debug a remplacer par le mini jeu
     }
 
     public override void OnExit()

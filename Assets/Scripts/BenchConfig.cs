@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[CreateAssetMenu(fileName = "BenchConfig", menuName ="Data/Config/Bench")]
 public class BenchConfig : ScriptableObject
 {
     [SerializeField] private List<IngredientData> _bubble;

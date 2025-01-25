@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(UISelectable))]
 public class CustomButton : Button
 {
     [SerializeField] private UISelectable _view;

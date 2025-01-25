@@ -8,6 +8,7 @@ public class StateGiveBubbleTea : AState
         //Play fill anim on customer
         BubbleTea bubbleTea = BubbleTeaManager.Instance.BubbleTea;
         bool answerRequest = RequestManager.Instance.SendBubbleTea(bubbleTea);
+        Debug.Log($"answerRequest : {answerRequest}");
         StateManager.Instance.ChangeState(new StateClientArrival());
     }
 

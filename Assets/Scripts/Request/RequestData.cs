@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RequestData", menuName = "Data/RequestData")]
 public class RequestData : ScriptableObject
 {
-    [SerializeField, Range(0, 100)] private float _exigence;
+    [SerializeField, Range(0, 100)] private int _exigence;
 
     [SerializeField] private CupSize _cupSize;
     [SerializeField, Range(0, 15)] private int _acidity;

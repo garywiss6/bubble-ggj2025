@@ -16,8 +16,8 @@ public class BubbleTeaManager : SingletonBehaviour<BubbleTeaManager>
     {
         if (_bubbleTea != null)
         {
-            if (_bubbleTea.TryAddIngredient(ingredient))
-                onAddIngredient?.Invoke(ingredient);
+            _bubbleTea.AddIngredient(ingredient);
+            onAddIngredient?.Invoke(ingredient);
         }
     }
 

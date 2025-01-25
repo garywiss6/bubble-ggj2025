@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
-  m_Name: Test1
+  m_Name: T_Green
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
-  _name: 
-  _type: 0
-  _acidity: -2.78
-  _sugar: 0.51
-  _fruit: 1.76
+  _name: Green Tea
+  _acidity: 4
+  _sugar: 0
+  _fruit: 1

@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c948d77fc3296f49a631b9dce7f5c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _config: {fileID: 11400000, guid: 0231100fecdcf1a4290e92d70f5379f2, type: 2}
   _panel: {fileID: 8890164812751443561}
   _prefab: {fileID: 87680244164207234, guid: 75d334981eec1464ba053b773fcef334, type: 3}
   _container: {fileID: 8542043054043049057}
@@ -146,3 +147,4 @@ MonoBehaviour:
   _cg: {fileID: 7024362526103483155}
   _showUiState: {fileID: 11400000, guid: 6fb3e5e866ccaf34890df7115836c8f5, type: 2}
   _hideUiState: {fileID: 11400000, guid: b9e12e9d2692e9e42a6d3b50aaba2979, type: 2}
+  _hideOnStart: 1

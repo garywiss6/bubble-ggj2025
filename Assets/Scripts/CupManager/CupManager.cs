@@ -10,10 +10,15 @@ public class CupManager : SingletonBehaviour<CupManager>
         _callback = callback;
         _panel.Show();
     }
-    
-    public void OnCupSelected(CupSize size)
+
+    public void OnCupSelected(int size)
     {
-        _callback?.Invoke(size);
+        _callback?.Invoke((CupSize)size);
+        _panel.Hide();
+    }
+
+    public void Hide()
+    {
         _panel.Hide();
     }
 }

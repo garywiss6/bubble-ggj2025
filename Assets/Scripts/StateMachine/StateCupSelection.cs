@@ -8,6 +8,12 @@ public class StateCupSelection : AState
         CupManager.Instance.Populate(OnSelectCup);
     }
 
+    public override void OnExit()
+    {
+        base.OnExit();
+        CupManager.Instance.Hide();
+    }
+
     private void OnSelectCup(CupSize size)
     {
         BubbleTeaManager.Instance.CreateNewBubbleTea(size);

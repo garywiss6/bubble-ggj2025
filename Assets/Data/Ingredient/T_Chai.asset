@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
-  m_Name: Test3
+  m_Name: T_Chai
   m_EditorClassIdentifier: 
-  _type: 2
-  _acidity: 1.42
-  _softness: 2.78
-  _sugar: 0.57
-  _fruit: -2.56
+  _sprite: {fileID: 0}
+  _name: Chai Tea
+  _acidity: 2
+  _sugar: 2
+  _fruit: 1
