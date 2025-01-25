@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
+  m_Name: SuccessTuto
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _Dialogs:
+  - speaker: 0
+    message: So?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: As in my childhood, the "DRINK" soothes my heart, and helps me sleep
+      better. If all your preparations are as good as this one, our soldiers will
+      make short work of the enemy
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: You honor me, sir
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: No, it's you, my dear
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Rest well tonight
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: I will come to support you when you leave
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: "Thank you, sir. \nGood night"
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: "Good night! \nAnd good luck"
+    hasChoice: 0
+    choices: []
