@@ -332,6 +332,8 @@ GameObject:
   - component: {fileID: 7241327957914013425}
   - component: {fileID: 3645672715857587028}
   - component: {fileID: 7675810143349786959}
+  - component: {fileID: 3992317952141952779}
+  - component: {fileID: 2609405509179302652}
   m_Layer: 5
   m_Name: Choice_1
   m_TagString: Untagged
@@ -459,6 +461,37 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!225 &3992317952141952779
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228325677207686602}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2609405509179302652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228325677207686602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa3ee18bb8575f4690cbf0963592080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rt: {fileID: 0}
+  _cg: {fileID: 0}
+  _normalState: {fileID: 0}
+  _highlightState: {fileID: 0}
+  _pressState: {fileID: 0}
+  _selectState: {fileID: 0}
+  _disableState: {fileID: 0}
 --- !u!1 &3769314770016388549
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a064ef1b6f61eb458bf459c73ae1c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogDataTest: {fileID: 11400000, guid: f4e7ee0cfc21ac34589bdfd772e0a2d5, type: 2}
+  _dialogDataTest: {fileID: 0}
   _finishCursor: {fileID: 8988243039168395166}
   _choices: {fileID: 3961792454188307335}
   _firstChoice: {fileID: 682209822576503482}
@@ -702,6 +735,8 @@ GameObject:
   - component: {fileID: 3885540030469342453}
   - component: {fileID: 9048277534798901477}
   - component: {fileID: 3917293899333612569}
+  - component: {fileID: 6274011137040198918}
+  - component: {fileID: 5762238745127443903}
   m_Layer: 5
   m_Name: Choice_2
   m_TagString: Untagged
@@ -829,6 +864,37 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!225 &6274011137040198918
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197819121644326452}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &5762238745127443903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6197819121644326452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa3ee18bb8575f4690cbf0963592080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rt: {fileID: 0}
+  _cg: {fileID: 0}
+  _normalState: {fileID: 0}
+  _highlightState: {fileID: 0}
+  _pressState: {fileID: 0}
+  _selectState: {fileID: 0}
+  _disableState: {fileID: 0}
 --- !u!1 &6301482408495969204
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +1010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello, lemme drink
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 222f4ba361884314cb2803d34020aed6, type: 2}
   m_sharedMaterial: {fileID: -1183822964418640276, guid: 222f4ba361884314cb2803d34020aed6, type: 2}
@@ -978,8 +1044,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1027,6 +1093,7 @@ GameObject:
   - component: {fileID: 6627656674342004166}
   - component: {fileID: 7714905108582483892}
   - component: {fileID: 4287458722896239125}
+  - component: {fileID: 542975401228262814}
   m_Layer: 5
   m_Name: Bubble
   m_TagString: Untagged
@@ -1053,7 +1120,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -798, y: -92}
-  m_SizeDelta: {x: 600, y: 400}
+  m_SizeDelta: {x: 600, y: 300}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &6627656674342004166
 CanvasRenderer:
@@ -1105,4 +1172,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b96b068bf9f89d4183059ebb644a7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _bubbleColors
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[DialogText+SpeakerType, Assembly-CSharp],[UnityEngine.Color,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[DialogText+SpeakerType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.9764706
+    - Name: 
+      Entry: 4
+      Data: 0.8666667
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.4765931
+    - Name: 
+      Entry: 4
+      Data: 0.875631
+    - Name: 
+      Entry: 4
+      Data: 0.9622642
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _DialogText: {fileID: 7649435123773397517}
+  _bubble: {fileID: 7714905108582483892}
+  _group: {fileID: 542975401228262814}
+--- !u!225 &542975401228262814
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459133080077063502}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

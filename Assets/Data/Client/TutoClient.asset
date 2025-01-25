@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43659e1fcd25a6b49aedf982e6710100, type: 3}
   m_Name: TutoClient
   m_EditorClassIdentifier: 
+  _WelcomeSprite: {fileID: -333201520, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _TalkSprite: {fileID: -1033418002, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _SipSprite: {fileID: 468619232, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _SipHand: {fileID: -1156972963, guid: 7e94b268815eca947b4bdd3dc34d090b, type: 3}
+  _HappySprite: {fileID: -3907971390109321574, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _HappyHand: {fileID: 1635991756, guid: 7e94b268815eca947b4bdd3dc34d090b, type: 3}
   _requestData: {fileID: 11400000, guid: 4d3f852e4e43c8e45a21a0c7d0e13b8a, type: 2}
   _welcomeDialog: {fileID: 11400000, guid: f4e7ee0cfc21ac34589bdfd772e0a2d5, type: 2}
   _successDialog: {fileID: 11400000, guid: d9283725cee60034582315b355a56aea, type: 2}
