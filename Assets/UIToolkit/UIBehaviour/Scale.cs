@@ -2,35 +2,27 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using DG.Tweening;
 
-namespace Moonkey.UI.Behaviour
+public class Scale : UIBehaviour
 {
-    public class Scale : UIBehaviour
+    [SerializeField] private float scale;
+
+    [SerializeField] private AnimationCurve _animCurve;
+    [SerializeField] private float _animDuration = .2f;
+
+    protected override void DoFromCurrent(UIView view)
     {
-        [SerializeField] private float scale;
+        float finalScale = view.Rt.localScale.magnitude + scale;
+        view.Rt.DOScale(finalScale, _animDuration).SetEase(_animCurve);
+    }
 
-        [TabGroup("Show"), SerializeField] private Ease showEase = Ease.OutCubic;
-        [TabGroup("Show"), SerializeField] private float showDuration = .5f;
-        [TabGroup("Hide"), SerializeField] private Ease hideEase = Ease.OutCubic;
-        [TabGroup("Hide"), SerializeField] private float hideDuration = .5f;
+    protected override void DoFromStart(UIView view)
+    {
+        float finalScale = view.OriginalineScale + scale;
+        view.Rt.DOScale(finalScale, _animDuration).SetEase(_animCurve);
+    }
 
-        public override void OnShow(UIView _view)
-        {
-            _view.Rt.DOScale(scale, showDuration).SetEase(showEase);
-        }
-
-        public override void OnHide(UIView _view)
-        {
-            _view.Rt.DOScale(1, hideDuration).SetEase(hideEase);
-        }
-
-        public override void OnShowInstant(UIView _view)
-        {
-            _view.Rt.localScale = Vector3.one * scale;
-        }
-
-        public override void OnHideInstant(UIView _view)
-        {
-            _view.Rt.localScale = Vector3.one;
-        }
+    protected override void DoToCustom(UIView view)
+    {
+        view.Rt.DOScale(scale, _animDuration).SetEase(_animCurve);
     }
 }

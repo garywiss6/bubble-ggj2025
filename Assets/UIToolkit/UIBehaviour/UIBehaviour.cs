@@ -1,14 +1,26 @@
 using System;
+using UnityEngine;
 
-namespace Moonkey.UI.Behaviour
+[Serializable]
+public abstract class UIBehaviour
 {
-    [Serializable]
-    public abstract class UIBehaviour
+    [SerializeField] protected RelativePositionStartType transistionType;
+    public void DoBehaviour(UIView view)
     {
-        public abstract void OnShow(UIView _view);
-        public abstract void OnHide(UIView _view);
-        public abstract void OnShowInstant(UIView _view);
-        public abstract void OnHideInstant(UIView _view);
+        switch (transistionType)
+        {
+            case RelativePositionStartType.FromStart:
+                DoFromStart(view); 
+                break;
+            case RelativePositionStartType.FromCurrent:
+                DoFromCurrent(view); 
+                break;
+            case RelativePositionStartType.ToCustom:
+                DoToCustom(view); 
+                break;
+        }
     }
-
+    protected abstract void DoFromStart(UIView view);
+    protected abstract void DoFromCurrent(UIView view);
+    protected abstract void DoToCustom(UIView view);
 }

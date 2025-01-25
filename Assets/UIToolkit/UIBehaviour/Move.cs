@@ -2,41 +2,29 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using DG.Tweening;
 
-namespace Moonkey.UI.Behaviour
+public class Move : UIBehaviour
 {
-    public class Move : UIBehaviour
+    [SerializeField] private Vector2 _move;
+
+    [SerializeField] private AnimationCurve _animCurve;
+    [SerializeField] private float _animDuration = .2f;
+
+    protected override void DoFromCurrent(UIView view)
     {
-        [MinValue(-1), MaxValue(1), SerializeField] private Vector2 direction;
-        [SerializeField] private float distance;
+        Vector2 finalPos = view.Rt.anchoredPosition + _move;
+        view.Rt.DOAnchorPos(finalPos, _animDuration).SetEase(_animCurve);
+    }
 
-        [TabGroup("Show"), SerializeField] private Ease showEase = Ease.OutCubic;
-        [TabGroup("Show"), SerializeField] private float showDuration = .5f;
-        [TabGroup("Hide"), SerializeField] private Ease hideEase = Ease.OutCubic;
-        [TabGroup("Hide"), SerializeField] private float hideDuration = .5f;
+    protected override void DoFromStart(UIView view)
+    {
+        Vector2 finalPos = view.OriginePosition + _move;
+        view.Rt.DOAnchorPos(finalPos, _animDuration).SetEase(_animCurve);
+    }
 
-        public override void OnShow(UIView _view)
-        {
-            Vector2 finalPos = _view.OriginalPos + direction * distance;
-            _view.Rt.DOAnchorPos(finalPos, showDuration).SetEase(showEase);
-        }
-
-        public override void OnHide(UIView _view)
-        {
-            Vector2 finalPos = _view.OriginalPos;
-            _view.Rt.DOAnchorPos(finalPos, hideDuration).SetEase(hideEase);
-        }
-
-        public override void OnShowInstant(UIView _view)
-        {
-            Vector2 finalPos = _view.OriginalPos + direction * distance;
-            _view.Rt.anchoredPosition = finalPos;
-        }
-
-        public override void OnHideInstant(UIView _view)
-        {
-            Vector2 finalPos = _view.OriginalPos;
-            _view.Rt.anchoredPosition = finalPos;
-        }
+    protected override void DoToCustom(UIView view)
+    {
+        Vector2 finalPos = _move;
+        view.Rt.DOAnchorPos(finalPos, _animDuration).SetEase(_animCurve);
     }
 }
 

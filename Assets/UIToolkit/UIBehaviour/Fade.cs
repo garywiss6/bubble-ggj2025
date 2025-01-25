@@ -2,45 +2,33 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using DG.Tweening;
 
-namespace Moonkey.UI.Behaviour
+public class Fade : UIBehaviour
 {
-    public class Fade : UIBehaviour
+    [SerializeField] private float _alpha;
+    [SerializeField] private bool _blockRaycast;
+    [SerializeField] private bool _interactable;
+
+    [SerializeField] private AnimationCurve _animCurve;
+    [SerializeField] private float _animDuration = .2f;
+
+    protected override void DoFromCurrent(UIView view)
     {
-        [SerializeField] private Vector2 alpha;
-        [SerializeField] private bool blockRaycast;
-        [SerializeField] private bool interactable;
+        view.Cg.DOFade(view.Cg.alpha + _alpha, _animDuration).SetEase(_animCurve);
+        view.Cg.blocksRaycasts = _blockRaycast;
+        view.Cg.interactable = _interactable;
+    }
 
-        [TabGroup("Show"), SerializeField] private Ease showEase = Ease.OutCubic;
-        [TabGroup("Show"), SerializeField] private float showDuration = .5f;
-        [TabGroup("Hide"), SerializeField] private Ease hideEase = Ease.OutCubic;
-        [TabGroup("Hide"), SerializeField] private float hideDuration = .5f;
+    protected override void DoFromStart(UIView view)
+    {
+        view.Cg.DOFade(view.OrigineAlpha + _alpha, _animDuration).SetEase(_animCurve);
+        view.Cg.blocksRaycasts = _blockRaycast;
+        view.Cg.interactable = _interactable;
+    }
 
-        public override void OnShow(UIView _view)
-        {
-            DOTween.To(() => _view.Cg.alpha = 0, x => _view.Cg.alpha = x, alpha.y, showDuration).SetEase(showEase);
-            _view.Cg.blocksRaycasts = blockRaycast;
-            _view.Cg.interactable = interactable;
-        }
-
-        public override void OnHide(UIView _view)
-        {
-            DOTween.To(() => _view.Cg.alpha = _view.Cg.alpha, x => _view.Cg.alpha = x, alpha.x, hideDuration).SetEase(hideEase);
-            _view.Cg.blocksRaycasts = false;
-            _view.Cg.interactable = false;
-        }
-
-        public override void OnShowInstant(UIView _view)
-        {
-            _view.Cg.alpha = alpha.y;
-            _view.Cg.blocksRaycasts = blockRaycast;
-            _view.Cg.interactable = interactable;
-        }
-
-        public override void OnHideInstant(UIView _view)
-        {
-            _view.Cg.alpha = alpha.x;
-            _view.Cg.blocksRaycasts = false;
-            _view.Cg.interactable = false;
-        }
+    protected override void DoToCustom(UIView view)
+    {
+        view.Cg.DOFade(_alpha, _animDuration).SetEase(_animCurve);
+        view.Cg.blocksRaycasts = _blockRaycast;
+        view.Cg.interactable = _interactable;
     }
 }

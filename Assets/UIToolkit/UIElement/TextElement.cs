@@ -2,38 +2,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-namespace Moonkey.UI.Element
+public class TextElement : UIElement
 {
-    public class TextElement : UIElement
+    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private ColorBlock colors = ColorBlock.defaultColorBlock;
+    public override void OnDown()
     {
-        [SerializeField] private TextMeshProUGUI text;
-        [SerializeField] private ColorBlock colors = ColorBlock.defaultColorBlock;
-        public override void OnDown()
-        {
-            if (text == null)
-                return;
-            text.color = colors.selectedColor;
-        }
+        if (text == null)
+            return;
+        text.color = colors.selectedColor;
+    }
 
-        public override void OnEnter()
-        {
-            if (text == null)
-                return;
-            text.color = colors.highlightedColor;
-        }
+    public override void OnEnter()
+    {
+        if (text == null)
+            return;
+        text.color = colors.highlightedColor;
+    }
 
-        public override void OnExit()
-        {
-            if (text == null)
-                return;
-            text.color = colors.normalColor;
-        }
+    public override void OnExit()
+    {
+        if (text == null)
+            return;
+        text.color = colors.normalColor;
+    }
 
-        public override void OnUp()
-        {
-            if (text == null)
-                return;
-            text.color = colors.normalColor;
-        }
+    public override void OnUp()
+    {
+        if (text == null)
+            return;
+        text.color = colors.normalColor;
     }
 }
