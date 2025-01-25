@@ -15,13 +15,17 @@ public class BubbleTea
 
     private Dictionary<IngredientType, int> _ingredients;
 
-    private float _acidity;
-    private float _sugar;
-    private float _fruit;
+    private int _acidity;
+    private int _sugar;
+    private int _fruit;
+    private bool _straw;
 
-    public float Acidity => _acidity;
-    public float Sugar => _sugar;
-    public float Fruit => _fruit;
+    public BubbleTeaConfig Config => _config;
+    public CupSize Size => _size;
+    public int Acidity => _acidity;
+    public int Sugar => _sugar;
+    public int Fruit => _fruit;
+    public bool Straw => _straw;
 
     public bool TryAddIngredient(IngredientData ingredient)
     {
@@ -50,6 +54,11 @@ public class BubbleTea
         _sugar = Mathf.Clamp(_sugar, 0, _config.Sugar);
         _fruit += ingredient.Fruit;
         _fruit = Mathf.Clamp(_fruit, 0, _config.Fruit);
+    }
+
+    public void AddStraw()
+    {
+        _straw = true;
     }
     public override string ToString()
     {
