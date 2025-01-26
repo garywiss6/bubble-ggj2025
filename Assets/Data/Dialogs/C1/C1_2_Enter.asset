@@ -43,7 +43,7 @@ MonoBehaviour:
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Glade to see we're on the same page ! On this note, I'd like a "DRINK"
-      !
+    message: Glade to see we're on the same page ! On this note, I'd like something
+      extremely acidic, with a touch of fruit... Do you see what I mean ?
     hasChoice: 0
     choices: []

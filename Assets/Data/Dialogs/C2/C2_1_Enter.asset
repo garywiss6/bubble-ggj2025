@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
-  m_Name: C1_1_Enter
+  m_Name: C2_1_Enter
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,33 +23,29 @@ MonoBehaviour:
     SerializationNodes: []
   _Dialogs:
   - speaker: 1
-    message: 'Don''t see it that way. See, on my everyday life, I''m just a watcher
-      on
-
-      the farms. Verifying that chickens are okay, and foxes are not around.
-
-      But
-      now, the roles are reversed ! The chickens are the hunters, and the foxes,
-
-      the
-      preys ! Isn''t that exciting ?'
+    message: I see. If I'm correct, you need clients to live, right ? What side are
+      you on then ?
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: I don't really like to see the natural order of thing torn to pieces.
-    hasChoice: 0
-    choices: []
-  - speaker: 1
-    message: Right. But hey, nothing can't the same forever ! Changes can be good,
-      you know.
+    message: None. I'm neutral, as choosing one side or the other is not my job.
+      It shouldn't be anyone's job actually, but it's just my opinion.
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: If you say so. What would you like to order sir ?
+    message: 'So you''re telling me that, if a angry fucking chicken, a feathery
+      monster who have suddenly grown teeth, show its ugly mug in here to order a
+      bubble tea, you will serve
+
+      it ?'
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Yes, I'd like a tea filled with acid, with a fruity touch on the top,
-      please.
+    message: Yes. It is my duty, and my pleasure, to serve my clients, after all.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Very well. I see how it is. I will order your strongest cup of sweet,
+      with some acid in it, then.
     hasChoice: 0
     choices: []

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
-  m_Name: C1_1_Enter
+  m_Name: C2_Win
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,33 +23,42 @@ MonoBehaviour:
     SerializationNodes: []
   _Dialogs:
   - speaker: 1
-    message: 'Don''t see it that way. See, on my everyday life, I''m just a watcher
-      on
-
-      the farms. Verifying that chickens are okay, and foxes are not around.
-
-      But
-      now, the roles are reversed ! The chickens are the hunters, and the foxes,
-
-      the
-      preys ! Isn''t that exciting ?'
+    message: That's... good.
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: I don't really like to see the natural order of thing torn to pieces.
+    message: Isn't it ?
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Right. But hey, nothing can't the same forever ! Changes can be good,
-      you know.
+    message: I guess... I tend to overreact. After all, what are some balls of feathers
+      with teeth ?
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: If you say so. What would you like to order sir ?
+    message: It's something unusual, I guess.
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Yes, I'd like a tea filled with acid, with a fruity touch on the top,
-      please.
+    message: 'Yeah... I guess you''re right. I''m still a little shaky, but I now
+      realized that, well,
+
+      I''m not alone !'
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Of course not ! And if you were, I'd be there to ease your loneliness.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Thank you. That's heartening to know that. Thank you so much.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: You're welcome. Good luck out there, sir !
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Thanks, I need it !
     hasChoice: 0
     choices: []

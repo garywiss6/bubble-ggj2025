@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
-  m_Name: C1_1_Enter
+  m_Name: C2_Lose
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,33 +23,41 @@ MonoBehaviour:
     SerializationNodes: []
   _Dialogs:
   - speaker: 1
-    message: 'Don''t see it that way. See, on my everyday life, I''m just a watcher
-      on
-
-      the farms. Verifying that chickens are okay, and foxes are not around.
-
-      But
-      now, the roles are reversed ! The chickens are the hunters, and the foxes,
-
-      the
-      preys ! Isn''t that exciting ?'
+    message: Are you... Afraid ?
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: I don't really like to see the natural order of thing torn to pieces.
+    message: 'Afraid ? A little bit, I guess. If I''m close to the no man''s land,
+      it''s because I know,
+
+      it''s where the soldiers and wounded are at their
+      most sensible. And so, this is when my
+
+      skills can be the most useful.'
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Right. But hey, nothing can't the same forever ! Changes can be good,
-      you know.
+    message: ' Wow... I wish I had your confidence.'
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: If you say so. What would you like to order sir ?
+    message: But you do. You're there. Not everyone can do that.
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Yes, I'd like a tea filled with acid, with a fruity touch on the top,
-      please.
+    message: You may be right... Anyway, your drink wasn't that great, but talking
+      was, on the other hand. So, from me and my people, thank you for that.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: It's an honor, sir. I hope to see you soon.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Same. Goodbye.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Goodbye.
     hasChoice: 0
     choices: []

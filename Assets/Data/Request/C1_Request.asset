@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091ad7f80d19ff34eb0b1202d0541903, type: 3}
-  m_Name: FirstRequest
+  m_Name: C1_Request
   m_EditorClassIdentifier: 
-  _exigence: 95
-  _cupSize: 0
-  _acidity: 7
-  _sugar: 9
-  _fruit: 5
+  _exigence: 90
+  _cupSize: 1
+  _acidity: 6
+  _sugar: 10
+  _fruit: 2
