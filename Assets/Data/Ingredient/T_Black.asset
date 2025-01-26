@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: T_Black
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 0.18867922, g: 0.038410943, b: 0.01512994, a: 1}
   _name: Black Tea
   _acidity: 3
   _sugar: 1

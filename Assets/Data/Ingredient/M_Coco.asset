@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: M_Coco
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0.2509804}
   _name: Coco Milk
   _acidity: 0
   _sugar: 3

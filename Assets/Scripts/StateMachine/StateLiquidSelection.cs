@@ -18,6 +18,7 @@ public class StateLiquidSelection : AState
 
     private void OnAddIngredient(IngredientData ingredient)
     {
-        StateManager.Instance.ChangeState(new StateExtraSelection());
+        PhysicsCupManager.Instance.FillLiquidClient(ingredient);
+        //StateManager.Instance.ChangeState(new StateExtraSelection());
     }
 }

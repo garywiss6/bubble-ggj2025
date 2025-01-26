@@ -276,7 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Cup: {fileID: 6202808770843469551}
-  _Liquid: {fileID: 2425635079011429294}
+  _Tea: {fileID: 2425635079011429294}
+  _Liquid: {fileID: 3318648994094600279}
   _BubblePrefab: {fileID: 2965275597828386517, guid: 8bbc17aac0fd7ef46936a70b020487ec, type: 3}
 --- !u!1001 &7649658074007355640
 PrefabInstance:
@@ -342,6 +343,11 @@ PrefabInstance:
 --- !u!1 &2425635079011429294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5440521238090591062, guid: 0e1fa4cf2f34f0a49b8abd8100176fcd, type: 3}
+  m_PrefabInstance: {fileID: 7649658074007355640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3318648994094600279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4910962982841684143, guid: 0e1fa4cf2f34f0a49b8abd8100176fcd, type: 3}
   m_PrefabInstance: {fileID: 7649658074007355640}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3937283180562921931 stripped

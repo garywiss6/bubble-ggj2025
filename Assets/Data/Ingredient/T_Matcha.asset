@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: T_Matcha
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 0.67687446, g: 1, b: 0.44700003, a: 1}
   _name: Matcha Tea
   _acidity: 1
   _sugar: 3
