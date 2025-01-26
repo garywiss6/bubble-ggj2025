@@ -18,6 +18,8 @@ public class DialogBubble : SerializedMonoBehaviour
     [SerializeField]
     private CanvasGroup _group;
 
+    [SerializeField] private List<AudioClip> _voices;
+
     public DelegateDefinition.void_D_void OnDialogFinished
     {
         get { return _onDialogFinished; }
@@ -61,8 +63,21 @@ public class DialogBubble : SerializedMonoBehaviour
             _currentTween.Kill();
         _DialogText.text = "";
         _bubble.sprite = _bubbleSprites[speakerType];
-        _currentTween = _DialogText.DOText(text, 10.0f)
+        int nbChara = 0;
+        _currentTween = _DialogText.DOText(text, 12.0f)
             .SetSpeedBased(true)
+            .SetEase(Ease.Linear)
+            .OnUpdate(() =>
+            {
+                if (_DialogText.text.Length > nbChara)
+                {
+                    nbChara = _DialogText.text.Length;
+                    if (_DialogText.text[nbChara - 1] >= 'a' && _DialogText.text[nbChara - 1] <= 'z')
+                    {
+                        SoundController.Instance.PlaySound2D(_voices[Random.Range(0, _voices.Count)], gameObject, 1.0f, true, speakerType == DialogText.SpeakerType.Customer ? 2.0f : 1.0f);
+                    }
+                }
+            })
             .OnComplete(() =>
             {
                 _onDialogFinished?.Invoke(); _currentTween = null;

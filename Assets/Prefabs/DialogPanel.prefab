@@ -1238,6 +1238,14 @@ MonoBehaviour:
   _DialogText: {fileID: 7649435123773397517}
   _bubble: {fileID: 7714905108582483892}
   _group: {fileID: 542975401228262814}
+  _voices:
+  - {fileID: 8300000, guid: d8f04511a67546741a307dbf67502244, type: 3}
+  - {fileID: 8300000, guid: 9f73eeb63cec58544b0d98b389ff06df, type: 3}
+  - {fileID: 8300000, guid: eb2313e1a1a48844ab1c1abf0323b837, type: 3}
+  - {fileID: 8300000, guid: 5952ae5d567199c48bdf0da827e06df0, type: 3}
+  - {fileID: 8300000, guid: 172fac4d0ce79e34e90c44c85b0ec58f, type: 3}
+  - {fileID: 8300000, guid: 35376fd5f72df7c498ae155f3e83ea7e, type: 3}
+  - {fileID: 8300000, guid: 6c558485e9af7704e920d885d546c85f, type: 3}
 --- !u!225 &542975401228262814
 CanvasGroup:
   m_ObjectHideFlags: 0

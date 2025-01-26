@@ -28,12 +28,13 @@ public class AudioSourceController
         return m_CurrentClip;
     }
 
-    public void PlayOneShot(GameObject entity, AudioClip soundClip, float volume, bool followEntity)
+    public void PlayOneShot(GameObject entity, AudioClip soundClip, float volume, bool followEntity, float pitch = 1.0f)
     {
         m_followEntity = followEntity;
         m_CurrentEntity = entity;
         m_CurrentClip = soundClip;
         m_AudioSource.transform.position = entity.transform.position;
+        m_AudioSource.pitch = pitch;
         m_AudioSource.PlayOneShot(soundClip, volume);
     }
 
@@ -188,7 +189,7 @@ public class SoundController : MonoBehaviour
         return sourceController;
     }
 
-    public AudioSourceController PlaySound2D(AudioClip sound, GameObject entity, float volume = 1.0f, bool followEntity = true)
+    public AudioSourceController PlaySound2D(AudioClip sound, GameObject entity, float volume = 1.0f, bool followEntity = true, float pitch = 1.0f)
     {
         if (sound == null)
         {
@@ -199,7 +200,7 @@ public class SoundController : MonoBehaviour
         AudioSourceController sourceController = m_AudioSources2D.Find(x => !x.IsPlaying);
         if (sourceController != null)
         {
-            sourceController.PlayOneShot(entity, sound, volume, followEntity);
+            sourceController.PlayOneShot(entity, sound, volume, followEntity, pitch);
         }
         return sourceController;
     }
