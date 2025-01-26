@@ -34,9 +34,7 @@ MonoBehaviour:
     message: Man, am I glad to be here, on this beautiful day ! Aren't you ?
     hasChoice: 1
     choices:
-    - message: I'm glad to be able to do my job, but war isn't my favorite place
-        to be. So, not that much.
+    - message: I'm glad to be able to do my job
       response: {fileID: 11400000, guid: 803db697ae0a5624cb5af6de45c2ec59, type: 2}
-    - message: It is a beautiful sunny day, indeed. But, aren't we at war ? - Yes
-        ! Isn't it exciting ?
+    - message: It is a beautiful sunny day, indeed.
       response: {fileID: 11400000, guid: b469dbfe65aa42b49b53632fab5875c7, type: 2}

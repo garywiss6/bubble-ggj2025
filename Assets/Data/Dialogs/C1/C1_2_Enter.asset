@@ -22,6 +22,10 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _Dialogs:
+  - speaker: 0
+    message: It is a beautiful sunny day, indeed. But, aren't we at war ?
+    hasChoice: 0
+    choices: []
   - speaker: 1
     message: Yes ! Isn't it exciting ?
     hasChoice: 0

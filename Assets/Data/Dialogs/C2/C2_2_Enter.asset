@@ -22,6 +22,13 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _Dialogs:
+  - speaker: 0
+    message: 'I do, I do. And yet, I don''t see why you are afraid ? You''re
+
+      a
+      fox, right ?'
+    hasChoice: 0
+    choices: []
   - speaker: 1
     message: Yes.
     hasChoice: 0

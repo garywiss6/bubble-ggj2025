@@ -60,10 +60,7 @@ MonoBehaviour:
       in a cave ?'
     hasChoice: 1
     choices:
-    - message: Honestly, I'm but an humble bubble tea maker, living in a caravan,
-        travelling from war to peace, to war again. I don't dive too much in geopolitical
-        matters.
+    - message: Honestly, I'm but an humble bubble tea maker
       response: {fileID: 11400000, guid: 28047ac5a56f7324f86715bb43e0d5ad, type: 2}
-    - message: I do, I do. And yet, I don't see why you are afraid ? You're a fox,
-        right ?
+    - message: I do, I do. And yet, I don't see why you are afraid ?
       response: {fileID: 11400000, guid: 5c45ddf4c1b0dc34cba244ed42d457cd, type: 2}

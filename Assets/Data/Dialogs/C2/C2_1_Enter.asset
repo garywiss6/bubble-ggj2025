@@ -22,6 +22,16 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _Dialogs:
+  - speaker: 0
+    message: 'Honestly, I''m but an humble bubble tea maker, living
+
+      in a caravan,
+      traveling from war to peace, to war again. I don''t dive too much
+
+      in
+      geopolitical matters.'
+    hasChoice: 0
+    choices: []
   - speaker: 1
     message: I see. If I'm correct, you need clients to live, right ? What side are
       you on then ?
