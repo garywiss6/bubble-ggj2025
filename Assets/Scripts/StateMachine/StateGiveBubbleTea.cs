@@ -10,7 +10,16 @@ public class StateGiveBubbleTea : AState
         bool answerRequest = RequestManager.Instance.SendBubbleTea(bubbleTea);
         BubbleTeaManager.Instance.HideTooltip();
         Debug.Log($"answerRequest : {answerRequest}");
+        DialogManager.Instance.Hide();
+        ClientAnimator.Instance._trigger += ClientLeaveEnd;
+        ClientAnimator.Instance.Trigger();
+    }
+
+    private void ClientLeaveEnd()
+    {
+        ClientAnimator.Instance._trigger -= ClientLeaveEnd;
         StateManager.Instance.ChangeState(new StateClientArrival());
+
     }
 
     public override void OnExit()

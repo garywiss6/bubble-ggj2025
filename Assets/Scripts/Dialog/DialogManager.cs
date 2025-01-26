@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class DialogManager : MonoBehaviour, IPointerClickHandler
 {
+    [SerializeField] private UIPanel _panel;
     static private DialogManager _instance;
     static public DialogManager Instance => _instance;
     [SerializeField] private DialogData _dialogDataTest;
@@ -70,6 +71,7 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
         _currentIndex = 0;
 
         _dialogBubble.ShowText(_currentDialog.Dialogs[_currentIndex].message, _currentDialog.Dialogs[_currentIndex].speaker);
+        _panel.Show();
     }
 
     void OnTextFinished()
@@ -109,4 +111,6 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
             }
         }
     }
+
+    public void Hide() => _panel.Hide();
 }

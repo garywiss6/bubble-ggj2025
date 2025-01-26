@@ -41,6 +41,7 @@ public class DialogBubble : SerializedMonoBehaviour
         {
             _currentTween.Complete();
             _currentTween = null;
+            ClientAnimator.Instance.SetState(0);
         }
     }
 
@@ -48,13 +49,13 @@ public class DialogBubble : SerializedMonoBehaviour
     {
         if (speakerType == DialogText.SpeakerType.Customer)
         {
-            ClientManager.Instance.SetClientTalkingSprite();
+            ClientAnimator.Instance.SetState(1);
         }
         else
         {
-            ClientManager.Instance.StopTalking();
+            ClientAnimator.Instance.SetState(0);
         }
-        
+
         _group.alpha = 1;
         if (_currentTween != null)
             _currentTween.Kill();
@@ -62,6 +63,10 @@ public class DialogBubble : SerializedMonoBehaviour
         _bubble.color = _bubbleColors[speakerType];
         _currentTween = _DialogText.DOText(text, 10.0f)
             .SetSpeedBased(true)
-            .OnComplete(() => { _onDialogFinished?.Invoke();_currentTween = null; });
+            .OnComplete(() =>
+            {
+                _onDialogFinished?.Invoke(); _currentTween = null;
+                ClientAnimator.Instance.SetState(0);
+            });
     }
 }
