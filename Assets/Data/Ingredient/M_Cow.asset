@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: M_Cow
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 1, g: 1, b: 1, a: 0.2509804}
   _name: Dairy
   _acidity: 3
   _sugar: 0

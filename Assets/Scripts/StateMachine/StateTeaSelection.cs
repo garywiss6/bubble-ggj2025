@@ -18,6 +18,7 @@ public class StateTeaSelection : AState
 
     private void OnAddIngredient(IngredientData ingredient)
     {
-        StateManager.Instance.ChangeState(new StateLiquidSelection());
+        PhysicsCupManager.Instance.FillTeaCup(ingredient);
+        //StateManager.Instance.ChangeState(new StateLiquidSelection());
     }
 }

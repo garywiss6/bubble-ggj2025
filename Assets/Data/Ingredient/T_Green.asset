@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: T_Green
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 0.8396226, g: 0.7629991, b: 0.0039604935, a: 1}
   _name: Green Tea
   _acidity: 4
   _sugar: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: T_Chai
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 0.667, g: 0.30751297, b: 0.16025323, a: 1}
   _name: Chai Tea
   _acidity: 2
   _sugar: 2

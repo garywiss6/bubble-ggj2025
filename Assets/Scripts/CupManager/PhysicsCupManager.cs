@@ -11,6 +11,7 @@ public class PhysicsCupManager : MonoBehaviour
     public static PhysicsCupManager Instance => _instance;
     
     [SerializeField] private GameObject _Cup;
+    [SerializeField] private GameObject _Tea;
     [SerializeField] private GameObject _Liquid;
 
     [SerializeField] private GameObject _BubblePrefab;
@@ -39,7 +40,7 @@ public class PhysicsCupManager : MonoBehaviour
             bubbles.Add(nBubble.Result[0]);
         }
 
-        await Awaitable.WaitForSecondsAsync(1.5f);
+        await Awaitable.WaitForSecondsAsync(2.5f);
         foreach (GameObject b in bubbles)
         {
             b.transform.parent = _Cup.transform;
@@ -52,16 +53,31 @@ public class PhysicsCupManager : MonoBehaviour
         seq.AppendCallback(() => {         StateManager.Instance.ChangeState(new StateTeaSelection());});
     }
 
-    public void FillLiquidCup(IngredientData liquid)
+    public void FillTeaCup(IngredientData liquid)
     {
+        _Tea.GetComponent<SpriteRenderer>().color = liquid.LiquidColor;
         IngredientBench.Instance.Hide();
         Sequence seq = DOTween.Sequence();
         seq.Append(_Cup.transform.DOMoveX(0, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
-        seq.Append(_Liquid.transform.DOMoveY(5, 3.0f).SetEase(Ease.OutCirc));
+        seq.Append(_Tea.transform.DOMoveY(0, 3.0f).SetEase(Ease.OutCirc));
         seq.AppendInterval(0.5f);
         seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
-        seq.AppendCallback(() => {         StateManager.Instance.ChangeState(new StateExtraSelection());});
+        seq.AppendCallback(() => { StateManager.Instance.ChangeState(new StateLiquidSelection());});
+    }
+    
+    public void FillLiquidClient(IngredientData liquid)
+    {
+        _Liquid.GetComponent<SpriteRenderer>().color = liquid.LiquidColor;
+        IngredientBench.Instance.Hide();
+        Sequence seq = DOTween.Sequence();
+        seq.Append(_Cup.transform.DOMoveX(0, 1.0f));
+        seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
+        seq.Append(_Liquid.transform.DOMoveY(0, 3.0f).SetEase(Ease.OutCirc));
+        seq.AppendInterval(0.5f);
+        seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
+        seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
+        seq.AppendCallback(() => { StateManager.Instance.ChangeState(new StateExtraSelection());});
     }
 }

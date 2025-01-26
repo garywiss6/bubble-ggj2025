@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: M_Oat
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _liquidColor: {r: 0.963855, g: 0.972549, b: 0.8004078, a: 0.2509804}
   _name: Oat Milk
   _acidity: 3
   _sugar: 0
