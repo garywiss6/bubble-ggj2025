@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: T_Matcha
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -5003410510149682957, guid: 590714088cdba6847b0478bc3f9ecfb6, type: 3}
   _liquidColor: {r: 0.67687446, g: 1, b: 0.44700003, a: 1}
   _name: Matcha Tea
   _acidity: 1

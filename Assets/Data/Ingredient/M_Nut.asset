@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: M_Nut
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 4772734572204239798, guid: 2b51139248b43604bb75f8b57ff58e99, type: 3}
   _liquidColor: {r: 0.9622642, g: 0.69668937, b: 0.5764507, a: 0.2509804}
   _name: Nut Milk
   _acidity: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: M_Coco
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 2079114827686867027, guid: 10a255ce15d9cd44991364a94479e3c2, type: 3}
   _liquidColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0.2509804}
   _name: Coco Milk
   _acidity: 0

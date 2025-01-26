@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: M_Cow
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 2718242332718166142, guid: d1afcbd3528b87948baf53dd3596c4d0, type: 3}
   _liquidColor: {r: 1, g: 1, b: 1, a: 0.2509804}
   _name: Dairy
   _acidity: 3
