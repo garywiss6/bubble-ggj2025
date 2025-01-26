@@ -11,6 +11,8 @@ public class UISelectable : UIView
     public void SetSelectable(SelectionStateType state)
     {
         Debug.Log($"Set {state}");
+        if (!IsInit)
+            return;
         switch (state)
         {
             case SelectionStateType.Normal:

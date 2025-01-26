@@ -21,7 +21,7 @@ MonoBehaviour:
       type: {class: Move, ns: , asm: Assembly-CSharp}
       data:
         transistionType: 0
-        _move: {x: 0, y: -540}
+        _move: {x: 0, y: -561}
         _animCurve:
           serializedVersion: 2
           m_Curve:

@@ -9,7 +9,7 @@ public class UIPanel : UIView
     private void Start()
     {
         if (_hideOnStart)
-            Hide();
+            HideInstant();
     }
 
     public void Show()
@@ -21,5 +21,15 @@ public class UIPanel : UIView
     {
         if (_hideUiState != null)
         _hideUiState.DoBehaviour(this);
+    }
+    public void ShowInstant()
+    {
+        if (_showUiState != null)
+            _showUiState.DoBehaviourInstant(this);
+    }
+    public void HideInstant()
+    {
+        if (_hideUiState != null)
+        _hideUiState.DoBehaviourInstant(this);
     }
 }

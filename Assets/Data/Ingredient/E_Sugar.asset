@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: E_Sugar
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
-  _name: Honey
+  _name: Sugar
   _acidity: 0
   _sugar: 5
   _fruit: 0

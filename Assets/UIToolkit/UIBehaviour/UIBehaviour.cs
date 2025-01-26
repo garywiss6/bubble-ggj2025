@@ -19,8 +19,26 @@ public abstract class UIBehaviour
                 DoToCustom(view); 
                 break;
         }
+    }    
+    public void DoBehaviourInstant(UIView view)
+    {
+        switch (transistionType)
+        {
+            case RelativePositionStartType.FromStart:
+                DoFromStartInstant(view); 
+                break;
+            case RelativePositionStartType.FromCurrent:
+                DoFromCurrentInstant(view); 
+                break;
+            case RelativePositionStartType.ToCustom:
+                DoToCustomInstant(view); 
+                break;
+        }
     }
     protected abstract void DoFromStart(UIView view);
     protected abstract void DoFromCurrent(UIView view);
     protected abstract void DoToCustom(UIView view);
+    protected abstract void DoFromStartInstant(UIView view);
+    protected abstract void DoFromCurrentInstant(UIView view);
+    protected abstract void DoToCustomInstant(UIView view);
 }

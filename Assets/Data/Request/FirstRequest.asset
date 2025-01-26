@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091ad7f80d19ff34eb0b1202d0541903, type: 3}
   m_Name: FirstRequest
   m_EditorClassIdentifier: 
-  _exigence: 20
+  _exigence: 95
   _cupSize: 0
   _acidity: 7
   _sugar: 9

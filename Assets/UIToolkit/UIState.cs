@@ -14,4 +14,12 @@ public class UIState : ScriptableObject
             behaviour.DoBehaviour(view);
         }
     }
+    public void DoBehaviourInstant(UIView view)
+    {
+        for (int i = 0; i < _behaviours.Count; i++)
+        {
+            UIBehaviour behaviour = _behaviours[i];
+            behaviour.DoBehaviourInstant(view);
+        }
+    }
 }
