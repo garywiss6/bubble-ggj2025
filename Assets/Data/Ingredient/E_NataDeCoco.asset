@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: E_NataDeCoco
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 1049726352891310302, guid: 4980a2ed09a30d546a9722c0221d2249, type: 3}
   _name: Nata de Coco
   _acidity: 0
   _sugar: 2

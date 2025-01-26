@@ -4,7 +4,13 @@ using DG.Tweening;
 
 public class PhysicsBubble : MonoBehaviour
 {
+    
     [SerializeField] private SpriteRenderer _Renderer;
+
+    public void SetSprite(Sprite sprite)
+    {
+        _Renderer.sprite = sprite;
+    }
     private void OnCollisionEnter2D(Collision2D other)
     {
         Vector2 normal = other.GetContact(0).normal;

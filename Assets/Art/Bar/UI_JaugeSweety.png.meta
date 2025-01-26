@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_JaugeSweety_0: 369394242846234258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

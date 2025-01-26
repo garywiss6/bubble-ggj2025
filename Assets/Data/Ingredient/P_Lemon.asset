@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: P_Lemon
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -6317821095967507569, guid: c94ffd6d0e968ce48becc6c8edb45922, type: 3}
   _name: Lemon
   _acidity: 4
   _sugar: 0

@@ -18,6 +18,7 @@ public class StateBubbleSelection : AState
 
     private void OnAddIngredient(IngredientData ingredient)
     {
-        StateManager.Instance.ChangeState(new StateTeaSelection());
+        PhysicsCupManager.Instance.FillBobaCup(ingredient);
+        //StateManager.Instance.ChangeState(new StateTeaSelection());
     }
 }
