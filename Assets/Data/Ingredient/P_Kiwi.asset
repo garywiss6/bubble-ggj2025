@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: P_Kiwi
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 7823101159883397578, guid: 9dbceab878d6bcd42847a1c7085a1972, type: 3}
   _name: Kiwi
   _acidity: 3
   _sugar: 1

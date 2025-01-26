@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: P_Tapioca
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -2019955963012346938, guid: 8d6f0c0bd4ba5334cbe3374d164e912e, type: 3}
   _name: Tapioca
   _acidity: 3
   _sugar: 2

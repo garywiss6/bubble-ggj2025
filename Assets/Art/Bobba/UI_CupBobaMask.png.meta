@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 315b36a11af1af541aa4dfac512434a6
+guid: bdffd5c001b6e364fb17dec745f28d8c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4212732103536212698
-    second: UI_JaugeFruity_0
+      213: -8878304290346231337
+    second: UI_CupBobaMask_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_JaugeFruity_0
+      name: UI_CupBobaMask_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 3
-        width: 58
-        height: 215
+        x: 0
+        y: 0
+        width: 257
+        height: 359
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62507dac87e5985c0800000000000000
-      internalID: -4212732103536212698
+      spriteID: 7d91616894de9c480800000000000000
+      internalID: -8878304290346231337
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_JaugeFruity_0: -4212732103536212698
+      UI_CupBobaMask_0: -8878304290346231337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: P_Raspberry
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -6194597259063719963, guid: 77a9df8f9a0ba97448f4cec9877abe24, type: 3}
   _name: Raspberry
   _acidity: 1
   _sugar: 3

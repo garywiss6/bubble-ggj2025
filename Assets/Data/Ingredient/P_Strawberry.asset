@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: P_Strawberry
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 197653843922499041, guid: 8a3496d6007ea0244ae44e1bbba2ff59, type: 3}
   _name: Strawberry
   _acidity: 0
   _sugar: 4

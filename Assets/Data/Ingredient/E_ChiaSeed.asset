@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: E_ChiaSeed
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 7979158966874310516, guid: 11930f9b365f3ba4f849cc3a5c7a67ea, type: 3}
   _name: Chia seeds
   _acidity: 1
   _sugar: 2
