@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43659e1fcd25a6b49aedf982e6710100, type: 3}
   m_Name: C2
   m_EditorClassIdentifier: 
-  _WelcomeSprite: {fileID: 0}
-  _TalkSprite: {fileID: 0}
-  _SipSprite: {fileID: 0}
-  _SipHand: {fileID: 0}
+  _WelcomeSprite: {fileID: -333201520, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _TalkSprite: {fileID: -1033418002, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _SipSprite: {fileID: 468619232, guid: d8fe88738a5b903409f2b04fc43bc695, type: 3}
+  _SipHand: {fileID: 21300000, guid: 5559398bf9d29c0488b5edb9bc6c9c0d, type: 3}
   _HappySprite: {fileID: 0}
   _HappyHand: {fileID: 0}
   _requestData: {fileID: 11400000, guid: 103707ac7e02cdf4498f27ef52fab5b9, type: 2}
