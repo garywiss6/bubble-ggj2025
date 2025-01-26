@@ -28,6 +28,7 @@ public class StateGiveBubbleTea : AState
     private void FinishDialog()
     {
         ClientManager.Instance.OnClientFinishWelcome -= FinishDialog;
+        PhysicsCupManager.Instance.ResetBubbleCup();
         DialogManager.Instance.Hide();
         ClientAnimator.Instance.Trigger();
     }

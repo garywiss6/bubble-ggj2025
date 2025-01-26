@@ -37,7 +37,14 @@ public class PhysicsCupManager : MonoBehaviour
     {
         _instance = this;
     }
-    
+
+    public void ResetBubbleCup()
+    {
+        Sequence seq = DOTween.Sequence();
+        seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
+        seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
+    }
+
     public async void FillBobaCup(IngredientData bubble)
     {
         _Cup.transform.position = Vector3.zero;
