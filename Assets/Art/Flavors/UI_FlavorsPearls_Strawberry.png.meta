@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsPearls_Strawberry_0: -1826910195469200588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
