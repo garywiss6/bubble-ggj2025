@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
   m_Name: T_Chai
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
+  _sprite: {fileID: -285246160804676388, guid: a6d64cff201a79740b25d130af8e135b, type: 3}
   _liquidColor: {r: 0.667, g: 0.30751297, b: 0.16025323, a: 1}
   _name: Chai Tea
   _acidity: 2
