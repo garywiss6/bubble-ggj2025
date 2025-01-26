@@ -111,7 +111,8 @@ public class ClientManager : MonoBehaviour
     public void ExitClient()
     {
         DialogManager.Instance.OnDialogFinished -= OnDialogFinished;
-        _Renderer.transform.DOMoveX(12f, 1.0f);
         _CurrentClient++;
+        if (_CurrentClient >= _ClientList.Count)
+            _CurrentClient = 0;
     }
 }

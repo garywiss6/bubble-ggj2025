@@ -352,6 +352,8 @@ MonoBehaviour:
   _HandRenderer: {fileID: 9046512237419741190}
   _ClientList:
   - {fileID: 11400000, guid: f99ae83def15ff443a712c8e1d85fb18, type: 2}
+  - {fileID: 11400000, guid: 0a57d7ea0b097f54ca3f908cc58a94ba, type: 2}
+  - {fileID: 11400000, guid: 7013e257a9279ae4b81fbdc4f102b5ae, type: 2}
 --- !u!114 &484640903192256912
 MonoBehaviour:
   m_ObjectHideFlags: 0
