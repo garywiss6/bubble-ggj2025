@@ -41,12 +41,15 @@ public class ClientManager : MonoBehaviour
 
     public void EnterClient()
     {
-        _Renderer.transform.DOMoveX(5.5f, 1.0f).OnComplete(() =>
-        {
-            DialogManager.Instance.OnDialogFinished += OnDialogFinished;
-            DialogManager.Instance.LaunchDialog(CurrentClient.WelcomeDialog);
-        });
-        //Mettre une sinusoide sur le Y
+        ClientAnimator.Instance._trigger += EnterClientFinished;
+        ClientAnimator.Instance.Trigger();
+    }
+
+    private void EnterClientFinished()
+    {
+        ClientAnimator.Instance._trigger -= EnterClientFinished;
+        DialogManager.Instance.OnDialogFinished += OnDialogFinished;
+        DialogManager.Instance.LaunchDialog(CurrentClient.WelcomeDialog);
     }
 
     void OnDialogFinished()
@@ -60,28 +63,4 @@ public class ClientManager : MonoBehaviour
         _Renderer.transform.DOMoveX(12f, 1.0f);
         _CurrentClient++;
     }
-
-    
-    // Ouais j'aurais du faire un enum des State en fait, c'est crade, trop tard
-    public void SetClientWelcomeSprite()
-    {
-        ChangeSprite(CurrentClient.WelcomeSprite);
-    }
-
-    public void StopTalking()
-    {
-        SetClientWelcomeSprite();
-    }
-
-    public void SetClientTalkingSprite()
-    {
-        ChangeSprite(CurrentClient.TalkSprite);
-    }
-
-    void ChangeSprite(Sprite sprite)
-    {
-        _Renderer.sprite = sprite;
-    }
-
-    
 }
