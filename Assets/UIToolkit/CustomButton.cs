@@ -31,5 +31,7 @@ public class CustomButton : Button
             return;
         SelectionStateType convertedState = (SelectionStateType)state;
         _view.SetSelectable(convertedState);
+        if (convertedState == SelectionStateType.Highlighted)
+            SoundController.Instance.PlaySound2D(AudioConfig.Instance.BubbleClip,gameObject);
     }
 }
