@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: E_NataDeCoco
   m_EditorClassIdentifier: 
   _sprite: {fileID: 1049726352891310302, guid: 4980a2ed09a30d546a9722c0221d2249, type: 3}
+  _ingredientIcon: {fileID: 2594403383852153234, guid: cab7532108e3bbb4ab6f66a6f6145a3d, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Nata de Coco
   _acidity: 0
   _sugar: 2

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P_Tapioca
   m_EditorClassIdentifier: 
   _sprite: {fileID: -2019955963012346938, guid: 8d6f0c0bd4ba5334cbe3374d164e912e, type: 3}
+  _ingredientIcon: {fileID: 3118472830079354337, guid: 18ae0ca8050a7754ea99bcc72a064d52, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Tapioca
   _acidity: 3
   _sugar: 2

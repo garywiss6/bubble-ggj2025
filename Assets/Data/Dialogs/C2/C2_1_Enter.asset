@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
-  m_Name: SuccessTuto
+  m_Name: C2_1_Enter
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -23,36 +23,39 @@ MonoBehaviour:
     SerializationNodes: []
   _Dialogs:
   - speaker: 0
-    message: So?
+    message: 'Honestly, I''m but an humble bubble tea maker, living
+
+      in a caravan,
+      traveling from war to peace, to war again. I don''t dive too much
+
+      in
+      geopolitical matters.'
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: As in my childhood, it soothes my heart, and helps me sleep better.
-      If all your preparations are as good as this one, our soldiers will make short
-      work of the enemy
+    message: I see. If I'm correct, you need clients to live, right ? What side are
+      you on then ?
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: You honor me, sir
-    hasChoice: 0
-    choices: []
-  - speaker: 1
-    message: No, it's you, my dear
-    hasChoice: 0
-    choices: []
-  - speaker: 1
-    message: Rest well tonight
-    hasChoice: 0
-    choices: []
-  - speaker: 1
-    message: I will come to support you when you leave
+    message: None. I'm neutral, as choosing one side or the other is not my job.
+      It shouldn't be anyone's job actually, but it's just my opinion.
     hasChoice: 0
     choices: []
   - speaker: 0
-    message: "Thank you, sir. \nGood night"
+    message: 'So you''re telling me that, if a angry fucking chicken, a feathery
+      monster who have suddenly grown teeth, show its ugly mug in here to order a
+      bubble tea, you will serve
+
+      it ?'
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: "Good night! \nAnd good luck"
+    message: Yes. It is my duty, and my pleasure, to serve my clients, after all.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Very well. I see how it is. I will order your strongest cup of sweet,
+      with some acid in it, then.
     hasChoice: 0
     choices: []

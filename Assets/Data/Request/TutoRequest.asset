@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39ab72e6b9f082b4c9363cb37028939d, type: 3}
-  m_Name: E_Sugar
+  m_Script: {fileID: 11500000, guid: 091ad7f80d19ff34eb0b1202d0541903, type: 3}
+  m_Name: TutoRequest
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
-  _ingredientIcon: {fileID: 637514765730665489, guid: ffdace979e3b49f47824c7c86baef33f, type: 3}
-  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
-  _name: Sugar
+  _exigence: 0
+  _cupSize: 0
   _acidity: 0
-  _sugar: 5
+  _sugar: 0
   _fruit: 0

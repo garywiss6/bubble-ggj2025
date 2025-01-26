@@ -16,7 +16,7 @@ public class IngredientContainer : MonoBehaviour, IPointerEnterHandler, IPointer
     public void Populate(IngredientData data)
     {
         _data = data;
-        _icon.sprite = data.Sprite;
+        _icon.sprite = data.IngredientIcon;
         _name.text = data.Name;
         _acidityTooltip.Populate(data.Acidity);
         _fruitTooltip.Populate(data.Fruit);

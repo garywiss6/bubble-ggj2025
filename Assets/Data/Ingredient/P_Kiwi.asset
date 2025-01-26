@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P_Kiwi
   m_EditorClassIdentifier: 
   _sprite: {fileID: 7823101159883397578, guid: 9dbceab878d6bcd42847a1c7085a1972, type: 3}
+  _ingredientIcon: {fileID: -5803497316227572337, guid: 013866ce09d7cb442a81d38de216d9d1, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Kiwi
   _acidity: 3
   _sugar: 1

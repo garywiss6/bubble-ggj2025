@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
+  m_Name: C2_Enter
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _Dialogs:
+  - speaker: 1
+    message: Uh... Good-good day... uh. Yeah.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Hello, sir. How can i help you ?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Mmh, I was wondering... Uh... Is it safe, in here ?
+    hasChoice: 0
+    choices:
+    - message: I'm glad to be able to do my job, but war isn't my favorite place
+        to be. So, not that much.
+      response: {fileID: 11400000, guid: 803db697ae0a5624cb5af6de45c2ec59, type: 2}
+    - message: It is a beautiful sunny day, indeed. But, aren't we at war ? - Yes
+        ! Isn't it exciting ?
+      response: {fileID: 11400000, guid: b469dbfe65aa42b49b53632fab5875c7, type: 2}
+  - speaker: 0
+    message: Safe ? Of course, it is. I guarantee it.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Oh i'm glad. I'm so glad. I fear for my life, every second, of everyday.
+      I'm so scared. Aren't you scared ?
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: As long as I'm here, I'm not. Why are you so scared ?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: 'What ? Don''t you know the state of the country right now ? Do you
+      live
+
+      in a cave ?'
+    hasChoice: 1
+    choices:
+    - message: Honestly, I'm but an humble bubble tea maker
+      response: {fileID: 11400000, guid: 28047ac5a56f7324f86715bb43e0d5ad, type: 2}
+    - message: I do, I do. And yet, I don't see why you are afraid ?
+      response: {fileID: 11400000, guid: 5c45ddf4c1b0dc34cba244ed42d457cd, type: 2}

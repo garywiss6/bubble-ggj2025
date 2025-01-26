@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: M_Cow
   m_EditorClassIdentifier: 
   _sprite: {fileID: 2718242332718166142, guid: d1afcbd3528b87948baf53dd3596c4d0, type: 3}
+  _ingredientIcon: {fileID: 2718242332718166142, guid: d1afcbd3528b87948baf53dd3596c4d0, type: 3}
   _liquidColor: {r: 1, g: 1, b: 1, a: 0.2509804}
   _name: Dairy
   _acidity: 3

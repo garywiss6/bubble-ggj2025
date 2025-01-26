@@ -8,10 +8,19 @@ public class StateGiveBubbleTea : AState
         //Play fill anim on customer
         BubbleTea bubbleTea = BubbleTeaManager.Instance.BubbleTea;
         bool answerRequest = RequestManager.Instance.SendBubbleTea(bubbleTea);
-        BubbleTeaManager.Instance.HideTooltip();
-        Debug.Log($"answerRequest : {answerRequest}");
-        DialogManager.Instance.Hide();
+        ClientManager.Instance.OnClientFinishWelcome += FinishDialog;
         ClientAnimator.Instance._trigger += ClientLeaveEnd;
+        if (!answerRequest)
+            ClientManager.Instance.ClientLoseDialog();
+        else
+            ClientManager.Instance.ClientWinDialog();
+        BubbleTeaManager.Instance.HideTooltip();
+    }
+
+    private void FinishDialog()
+    {
+        ClientManager.Instance.OnClientFinishWelcome -= FinishDialog;
+        DialogManager.Instance.Hide();
         ClientAnimator.Instance.Trigger();
     }
 

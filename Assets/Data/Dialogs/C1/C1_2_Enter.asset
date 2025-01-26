@@ -22,6 +22,10 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _Dialogs:
+  - speaker: 0
+    message: It is a beautiful sunny day, indeed. But, aren't we at war ?
+    hasChoice: 0
+    choices: []
   - speaker: 1
     message: Yes ! Isn't it exciting ?
     hasChoice: 0
@@ -43,7 +47,7 @@ MonoBehaviour:
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Glade to see we're on the same page ! On this note, I'd like a "DRINK"
-      !
+    message: Glade to see we're on the same page ! On this note, I'd like something
+      extremely acidic, with a touch of fruit... Do you see what I mean ?
     hasChoice: 0
     choices: []

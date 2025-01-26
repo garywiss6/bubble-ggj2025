@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: E_ChiaSeed
   m_EditorClassIdentifier: 
   _sprite: {fileID: 7979158966874310516, guid: 11930f9b365f3ba4f849cc3a5c7a67ea, type: 3}
+  _ingredientIcon: {fileID: -285246160804676388, guid: a6d64cff201a79740b25d130af8e135b, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Chia seeds
   _acidity: 1
   _sugar: 2

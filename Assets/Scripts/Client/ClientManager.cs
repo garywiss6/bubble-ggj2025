@@ -52,6 +52,19 @@ public class ClientManager : MonoBehaviour
         DialogManager.Instance.LaunchDialog(CurrentClient.WelcomeDialog);
     }
 
+    public void ClientLoseDialog()
+    {
+        ClientAnimator.Instance._trigger -= EnterClientFinished;
+        DialogManager.Instance.OnDialogFinished += OnDialogFinished;
+        DialogManager.Instance.LaunchDialog(CurrentClient.FailedDialog);
+    }
+    public void ClientWinDialog()
+    {
+        ClientAnimator.Instance._trigger -= EnterClientFinished;
+        DialogManager.Instance.OnDialogFinished += OnDialogFinished;
+        DialogManager.Instance.LaunchDialog(CurrentClient.SuccessDialog);
+    }
+
     public void TakeASip()
     {
         _Renderer.sprite = CurrentClient.SipSprite;

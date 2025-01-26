@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43659e1fcd25a6b49aedf982e6710100, type: 3}
-  m_Name: C1
+  m_Name: C2
   m_EditorClassIdentifier: 
   _WelcomeSprite: {fileID: 0}
   _TalkSprite: {fileID: 0}
@@ -18,7 +18,7 @@ MonoBehaviour:
   _SipHand: {fileID: 0}
   _HappySprite: {fileID: 0}
   _HappyHand: {fileID: 0}
-  _requestData: {fileID: 11400000, guid: ce5b73d55f89a374d8bb44e0e0ddc1fd, type: 2}
-  _welcomeDialog: {fileID: 11400000, guid: 9a26bb6db02b69546a618ecfd29f2740, type: 2}
-  _successDialog: {fileID: 11400000, guid: c0baa6190bf657049955e998fe881f1d, type: 2}
-  _failedDialog: {fileID: 11400000, guid: 4877d6a3f08ab9146932b65935d6ad0c, type: 2}
+  _requestData: {fileID: 11400000, guid: 103707ac7e02cdf4498f27ef52fab5b9, type: 2}
+  _welcomeDialog: {fileID: 11400000, guid: 0335aa6befd3d764685339c913c3f729, type: 2}
+  _successDialog: {fileID: 11400000, guid: 3fb58002a0298134db1d0f3b7289fe76, type: 2}
+  _failedDialog: {fileID: 11400000, guid: c1e40bd598c30f149995e7f6e07e50f9, type: 2}
