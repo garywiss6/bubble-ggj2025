@@ -4,11 +4,6 @@ public class StateManager : SingletonBehaviour<StateManager>
 {
     private AState _currentState;
 
-    private void Start()
-    {
-        ChangeState(new StateClientArrival());
-    }
-
     public void ChangeState(AState state)
     {
         if (_currentState != null)
@@ -16,5 +11,10 @@ public class StateManager : SingletonBehaviour<StateManager>
         _currentState = state;
         Debug.Log($"ChangeState : {_currentState.ToString()}");
         _currentState.OnEnter();
+    }
+
+    public void Init()
+    {
+        ChangeState(new StateClientArrival());
     }
 }
