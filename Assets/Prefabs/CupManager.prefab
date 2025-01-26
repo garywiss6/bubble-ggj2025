@@ -563,7 +563,7 @@ MonoBehaviour:
   _cg: {fileID: 4870644898393442147}
   _showUiState: {fileID: 11400000, guid: 14e4fcf73b714474784d180be2a16300, type: 2}
   _hideUiState: {fileID: 11400000, guid: 2d7afd69f55aa55418d2fb692b8f94da, type: 2}
-  _hideOnStart: 0
+  _hideOnStart: 1
 --- !u!1 &8429334353736879775
 GameObject:
   m_ObjectHideFlags: 0
