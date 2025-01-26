@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsTopings_Honey_0: -757844119313809646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

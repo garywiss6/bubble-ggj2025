@@ -6,6 +6,13 @@ public class StateGiveBubbleTea : AState
     {
         base.OnEnter();
         //Play fill anim on customer
+        PhysicsCupManager.Instance.OnSip += OnBubbleTeaSipped;
+        PhysicsCupManager.Instance.GiveBubbleTea();
+        ClientManager.Instance.TakeASip();
+    }
+
+    public void OnBubbleTeaSipped()
+    {
         BubbleTea bubbleTea = BubbleTeaManager.Instance.BubbleTea;
         bool answerRequest = RequestManager.Instance.SendBubbleTea(bubbleTea);
         ClientManager.Instance.OnClientFinishWelcome += FinishDialog;
@@ -15,6 +22,7 @@ public class StateGiveBubbleTea : AState
         else
             ClientManager.Instance.ClientWinDialog();
         BubbleTeaManager.Instance.HideTooltip();
+        PhysicsCupManager.Instance.OnSip -= OnBubbleTeaSipped;
     }
 
     private void FinishDialog()

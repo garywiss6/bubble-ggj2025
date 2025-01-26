@@ -28,6 +28,7 @@ public class ClientManager : MonoBehaviour
             _OnClientFinishWelcome = value;
         }
     }
+    
 
     //Yolo
     private ClientData CurrentClient 
@@ -70,6 +71,17 @@ public class ClientManager : MonoBehaviour
         _Renderer.sprite = CurrentClient.SipSprite;
         _HandRenderer.sprite = CurrentClient.SipHand;
         _HandRenderer.color = Color.white;
+    }
+
+    public void FillClient(float time, float percent)
+    {
+        float tw = 0;
+        DOTween.To(() => tw, x => tw = x, percent, time)
+            .OnUpdate(() =>
+            {
+                _Renderer.material.SetFloat("_Fill", tw);
+                _HandRenderer.material.SetFloat("_Fill", tw);
+            });
     }
 
     void OnDialogFinished()

@@ -3,6 +3,7 @@ using System.Numerics;
 using DG.Tweening;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
 public class PhysicsCupManager : MonoBehaviour
@@ -18,6 +19,19 @@ public class PhysicsCupManager : MonoBehaviour
 
     [SerializeField] private GameObject _BubblePrefab;
 
+    private DelegateDefinition.void_D_void _OnSip;
+
+    public DelegateDefinition.void_D_void OnSip
+    {
+        get
+        {
+            return _OnSip;
+        }
+        set
+        {
+            _OnSip = value;
+        }
+    }
     void Awake()
     {
         _instance = this;
@@ -46,6 +60,7 @@ public class PhysicsCupManager : MonoBehaviour
         foreach (GameObject b in bubbles)
         {
             b.transform.parent = _Cup.transform;
+            b.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             b.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         }
 
@@ -103,6 +118,11 @@ public class PhysicsCupManager : MonoBehaviour
     {
         Sequence seq = DOTween.Sequence();
         seq.Append(_Cup.transform.DOMove(new Vector3(4.65f, 0.5f, 0), 1.0f));
-        seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
+        seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
+        seq.AppendInterval(1.0f);
+        seq.Append(_Tea.transform.DOMoveY(-3.5f, 3.0f).SetEase(Ease.OutCirc));
+        seq.Join(_Liquid.transform.DOMoveY(-3.5f, 3.0f).SetEase(Ease.OutCirc));
+        seq.JoinCallback(() => { ClientManager.Instance.FillClient(0.8f, 3.0f); });
+        seq.AppendCallback(() => { _OnSip?.Invoke(); });
     }
 }
