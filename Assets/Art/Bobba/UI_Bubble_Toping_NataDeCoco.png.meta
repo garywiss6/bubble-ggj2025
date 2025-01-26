@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Bubble_Toping_NataDeCoco_0: 1049726352891310302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

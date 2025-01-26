@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Bubble_Toping_ChiaSeeds_0: 7979158966874310516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

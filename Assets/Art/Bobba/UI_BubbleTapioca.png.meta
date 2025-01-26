@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_BubbleTapioca_0: -2019955963012346938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
