@@ -40,6 +40,10 @@ public class PhysicsCupManager : MonoBehaviour
 
     public void ResetBubbleCup()
     {
+        _Straw.DOFade(0, 0.1f);
+        _Seal.DOFade(0, 0.1f);
+        _Seal.transform.DOLocalMoveY(2.5f, 0.1f);
+        _Straw.transform.DOLocalMoveY(5, 0.1f);
         Sequence seq = DOTween.Sequence();
         seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
