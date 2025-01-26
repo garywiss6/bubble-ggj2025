@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MusicOutput: {fileID: 9134741557310948322, guid: 1e58f34f8bdf1a348b0665e89278bcb6, type: 2}
-  m_CurrentMusic: {fileID: 8300000, guid: 0c847ce2e3fd846448fd4a4e9fb5a620, type: 3}
+  m_CurrentMusic: {fileID: 8300000, guid: 575c0fa9cb529e446a00dd930bc1b5de, type: 3}
   musicPlayOnAwake: 1
   musicDelay: 0
   musicVolume: 1
