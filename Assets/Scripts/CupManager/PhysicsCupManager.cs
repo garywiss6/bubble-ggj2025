@@ -107,7 +107,7 @@ public class PhysicsCupManager : MonoBehaviour
         seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
         seq.Append(_Seal.DOFade(1, 0.8f));
         seq.Append(_Seal.transform.DOMoveY(1.5f, 0.8f));
-        seq.Append(_Straw.DOFade(1, 0.8f));
+        seq.Append(_Straw.DOFade(0.5f, 0.8f));
         seq.Append(_Straw.transform.DOMoveY(1.2f, 0.8f));
         seq.AppendInterval(0.8f);
         seq.AppendCallback(() => { StateManager.Instance.ChangeState(new StateGiveBubbleTea());});
@@ -123,6 +123,17 @@ public class PhysicsCupManager : MonoBehaviour
         seq.Append(_Tea.transform.DOMoveY(-3.5f, 3.0f).SetEase(Ease.OutCirc));
         seq.Join(_Liquid.transform.DOMoveY(-3.5f, 3.0f).SetEase(Ease.OutCirc));
         seq.JoinCallback(() => { ClientManager.Instance.FillClient(0.8f, 3.0f); });
+        int i = 0;
+        foreach (PhysicsBubble b in _Cup.GetComponentsInChildren<PhysicsBubble>())
+        {
+            b.GetComponent<Collider2D>().isTrigger = true;
+            Sequence bSeq = DOTween.Sequence();
+            bSeq.Join(b.transform.DOLocalMove(new Vector3(0, -0.8f, 0), 0.4f));
+            bSeq.Append(b.transform.DOLocalMove(new Vector3(0, 3.4f, 0), 0.4f));
+            bSeq.SetDelay(i * 0.1f + 2.2f);
+            bSeq.OnComplete(() => { Destroy(b.gameObject); });
+            i++;
+        }
         seq.AppendCallback(() => { _OnSip?.Invoke(); });
     }
 }
