@@ -35,8 +35,8 @@ public class StateGiveBubbleTea : AState
     private void ClientLeaveEnd()
     {
         ClientAnimator.Instance._trigger -= ClientLeaveEnd;
+        ClientManager.Instance.ExitClient();
         StateManager.Instance.ChangeState(new StateClientArrival());
-
     }
 
     public override void OnExit()
