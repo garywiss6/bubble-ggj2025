@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class IngredientBench : SingletonBehaviour<IngredientBench>
 {
@@ -8,10 +9,38 @@ public class IngredientBench : SingletonBehaviour<IngredientBench>
     [SerializeField] private IngredientContainer _prefab;
     [SerializeField] private Transform _container;
 
-    public void PopulateBubble() => Populate(_config.Bubble);
-    public void PopulateTea() => Populate(_config.Tea);
-    public void PopulateLiquid() => Populate(_config.Liquid);
-    public void PopulateExtra() => Populate(_config.Extra);
+    [SerializeField] private TextMeshProUGUI _header;
+    [SerializeField] private string _cupText;
+    [SerializeField] private string _bubbleText;
+    [SerializeField] private string _teaText;
+    [SerializeField] private string _milkText;
+    [SerializeField] private string _extraText;
+
+    public void PopulateCup()
+    {
+        Populate(new List<IngredientData>());
+        _header.text = _cupText;
+    }
+    public void PopulateBubble()
+    {
+        Populate(_config.Bubble);
+        _header.text = _bubbleText;
+    }
+    public void PopulateTea()
+    {
+        Populate(_config.Tea);
+        _header.text = _teaText;
+    }
+    public void PopulateLiquid()
+    {
+        Populate(_config.Liquid);
+        _header.text = _milkText;
+    }
+    public void PopulateExtra()
+    {
+        Populate(_config.Extra);
+        _header.text = _extraText;
+    }
 
     private void Populate(List<IngredientData> _datas)
     {
