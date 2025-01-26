@@ -372,6 +372,7 @@ MonoBehaviour:
   _Seal: {fileID: 7097252537798051543}
   _Straw: {fileID: 6037280044804779025}
   _BubblePrefab: {fileID: 2965275597828386517, guid: 8bbc17aac0fd7ef46936a70b020487ec, type: 3}
+  _WaterSfx: {fileID: 8300000, guid: 13dff1962fe734d44a836bbbadf013f2, type: 3}
 --- !u!1 &7306259888921187299
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ public class PhysicsCupManager : MonoBehaviour
 
     [SerializeField] private GameObject _BubblePrefab;
 
+    [SerializeField] private AudioClip _WaterSfx;
     private DelegateDefinition.void_D_void _OnSip;
 
     public DelegateDefinition.void_D_void OnSip
@@ -39,6 +40,12 @@ public class PhysicsCupManager : MonoBehaviour
     
     public async void FillBobaCup(IngredientData bubble)
     {
+        _Cup.transform.position = Vector3.zero;
+        _Cup.transform.localScale = Vector3.one;
+        _Straw.DOFade(0, 0.1f);
+        _Seal.DOFade(0, 0.1f);
+        _Seal.transform.DOLocalMoveY(2.5f, 0.1f);
+        _Straw.transform.DOLocalMoveY(5, 0.1f);
         IngredientBench.Instance.Hide();
         _Cup.SetActive(true);
         List<GameObject> bubbles = new List<GameObject>();
@@ -77,7 +84,11 @@ public class PhysicsCupManager : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(_Cup.transform.DOMoveX(0, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
-        seq.Append(_Tea.transform.DOMoveY(0, 3.0f).SetEase(Ease.OutCirc));
+        seq.AppendCallback(() =>
+        {
+            SoundController.Instance.PlaySound2D(_WaterSfx, gameObject);
+        });
+        seq.Append(_Tea.transform.DOMoveY(0, 10.0f).SetEase(Ease.OutCirc));
         seq.AppendInterval(0.5f);
         seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
@@ -91,7 +102,11 @@ public class PhysicsCupManager : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(_Cup.transform.DOMoveX(0, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
-        seq.Append(_Liquid.transform.DOMoveY(0, 3.0f).SetEase(Ease.OutCirc));
+        seq.AppendCallback(() =>
+        {
+            SoundController.Instance.PlaySound2D(_WaterSfx, gameObject);
+        });
+        seq.Append(_Liquid.transform.DOMoveY(0, 10.0f).SetEase(Ease.OutCirc));
         seq.AppendInterval(0.5f);
         seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
@@ -106,9 +121,9 @@ public class PhysicsCupManager : MonoBehaviour
         seq.Append(_Cup.transform.DOMoveX(0, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
         seq.Append(_Seal.DOFade(1, 0.8f));
-        seq.Append(_Seal.transform.DOMoveY(1.5f, 0.8f));
+        seq.Append(_Seal.transform.DOLocalMoveY(1.5f, 0.8f));
         seq.Append(_Straw.DOFade(0.5f, 0.8f));
-        seq.Append(_Straw.transform.DOMoveY(1.2f, 0.8f));
+        seq.Append(_Straw.transform.DOLocalMoveY(1.2f, 0.8f));
         seq.AppendInterval(0.8f);
         seq.AppendCallback(() => { StateManager.Instance.ChangeState(new StateGiveBubbleTea());});
     }

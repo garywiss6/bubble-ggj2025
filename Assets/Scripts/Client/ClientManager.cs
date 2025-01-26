@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //J'ai mis Client au lieu de Customer, pas grave c'est du franglais 
 public class ClientManager : MonoBehaviour
@@ -42,6 +43,8 @@ public class ClientManager : MonoBehaviour
 
     public void EnterClient()
     {
+        _Renderer.material.SetFloat("_Fill", 0);
+        _HandRenderer.material.SetFloat("_Fill", 0);
         ClientAnimator.Instance._trigger += EnterClientFinished;
         ClientAnimator.Instance.Trigger();
     }
@@ -113,6 +116,9 @@ public class ClientManager : MonoBehaviour
         DialogManager.Instance.OnDialogFinished -= OnDialogFinished;
         _CurrentClient++;
         if (_CurrentClient >= _ClientList.Count)
-            _CurrentClient = 0;
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //_CurrentClient = 0;
+        }
     }
 }
