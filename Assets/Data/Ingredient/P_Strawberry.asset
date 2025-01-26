@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P_Strawberry
   m_EditorClassIdentifier: 
   _sprite: {fileID: 197653843922499041, guid: 8a3496d6007ea0244ae44e1bbba2ff59, type: 3}
+  _ingredientIcon: {fileID: -1826910195469200588, guid: ef5db47c6bde9874ebfb0d128beb0e1c, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Strawberry
   _acidity: 0
   _sugar: 4

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: T_Green
   m_EditorClassIdentifier: 
   _sprite: {fileID: 8397985018483360194, guid: 981383a898b7d2242988a010d8cc39be, type: 3}
+  _ingredientIcon: {fileID: 8397985018483360194, guid: 981383a898b7d2242988a010d8cc39be, type: 3}
   _liquidColor: {r: 0.8396226, g: 0.7629991, b: 0.0039604935, a: 1}
   _name: Green Tea
   _acidity: 4

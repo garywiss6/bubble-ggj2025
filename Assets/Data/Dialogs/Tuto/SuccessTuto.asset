@@ -27,9 +27,9 @@ MonoBehaviour:
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: As in my childhood, the "DRINK" soothes my heart, and helps me sleep
-      better. If all your preparations are as good as this one, our soldiers will
-      make short work of the enemy
+    message: As in my childhood, it soothes my heart, and helps me sleep better.
+      If all your preparations are as good as this one, our soldiers will make short
+      work of the enemy
     hasChoice: 0
     choices: []
   - speaker: 0

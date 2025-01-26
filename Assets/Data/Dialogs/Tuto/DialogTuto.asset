@@ -80,6 +80,6 @@ MonoBehaviour:
     hasChoice: 0
     choices: []
   - speaker: 1
-    message: Take your time, and make me a "DRINK", please.
+    message: Take your time, and make me an equal mixture of acid and sugar, please.
     hasChoice: 0
     choices: []

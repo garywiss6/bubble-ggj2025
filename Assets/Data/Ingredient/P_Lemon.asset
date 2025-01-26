@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P_Lemon
   m_EditorClassIdentifier: 
   _sprite: {fileID: -6317821095967507569, guid: c94ffd6d0e968ce48becc6c8edb45922, type: 3}
+  _ingredientIcon: {fileID: 6320452267975035447, guid: 005a0e3d0088aa643be72323e7a15c17, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Lemon
   _acidity: 4
   _sugar: 0

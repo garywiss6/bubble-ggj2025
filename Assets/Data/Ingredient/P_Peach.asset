@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P_Peach
   m_EditorClassIdentifier: 
   _sprite: {fileID: 3995557776411336059, guid: 4b67ccd575dd2c748957d3d798373ed9, type: 3}
+  _ingredientIcon: {fileID: 448363652757605739, guid: 68e5e5f1e7a485543be699bf7c9f0374, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Peach
   _acidity: 2
   _sugar: 2

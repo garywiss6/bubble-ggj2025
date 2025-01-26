@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: T_Chai
   m_EditorClassIdentifier: 
   _sprite: {fileID: -285246160804676388, guid: a6d64cff201a79740b25d130af8e135b, type: 3}
+  _ingredientIcon: {fileID: -3392845768112535357, guid: e69543f1cd793d34da8725ad25d7bc70, type: 3}
   _liquidColor: {r: 0.667, g: 0.30751297, b: 0.16025323, a: 1}
   _name: Chai Tea
   _acidity: 2

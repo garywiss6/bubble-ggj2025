@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: E_Sugar
   m_EditorClassIdentifier: 
   _sprite: {fileID: 0}
+  _ingredientIcon: {fileID: 637514765730665489, guid: ffdace979e3b49f47824c7c86baef33f, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Sugar
   _acidity: 0
   _sugar: 5

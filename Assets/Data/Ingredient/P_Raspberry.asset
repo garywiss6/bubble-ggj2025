@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: P_Raspberry
   m_EditorClassIdentifier: 
   _sprite: {fileID: -6194597259063719963, guid: 77a9df8f9a0ba97448f4cec9877abe24, type: 3}
+  _ingredientIcon: {fileID: 5728456497017664862, guid: 0b299d57412acc54d97ee02f7bc6c2e7, type: 3}
+  _liquidColor: {r: 0, g: 0, b: 0, a: 0}
   _name: Raspberry
   _acidity: 1
   _sugar: 3
