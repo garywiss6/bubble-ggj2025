@@ -66,11 +66,30 @@ public class ClientManager : MonoBehaviour
         DialogManager.Instance.LaunchDialog(CurrentClient.SuccessDialog);
     }
 
+
+    public void DefaultSprite()
+    {
+        _Renderer.sprite = CurrentClient.WelcomeSprite;
+    }
+
+    public void TalkSprite()
+    {
+        _Renderer.sprite = CurrentClient.TalkSprite;
+    }
+    
+    public void HappySprite()
+    {
+        _Renderer.sprite = CurrentClient.HappySprite;
+        _HandRenderer.sprite = CurrentClient.HappyHand;
+        _HandRenderer.color = Color.white;
+    }
+    
     public void TakeASip()
     {
         _Renderer.sprite = CurrentClient.SipSprite;
         _HandRenderer.sprite = CurrentClient.SipHand;
         _HandRenderer.color = Color.white;
+        ClientAnimator.Instance.TakeASip();
     }
 
     public void FillClient(float time, float percent)

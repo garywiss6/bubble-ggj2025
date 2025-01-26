@@ -9,9 +9,24 @@ public class ClientAnimator : SingletonBehaviour<ClientAnimator>
         _animator.SetInteger("InteractionState", state);
     }
 
+    public void DefaultSprite()
+    {
+        ClientManager.Instance.DefaultSprite();
+    }
+    
+    public void TalkSprite()
+    {
+        ClientManager.Instance.TalkSprite();
+    }
+
     public void Trigger()
     {
         _animator.SetTrigger("Trigger");
+    }
+
+    public void TakeASip()
+    {
+        _animator.SetTrigger("Sip");
     }
 
     public void OnArrival()
