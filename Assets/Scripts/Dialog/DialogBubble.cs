@@ -13,7 +13,7 @@ public class DialogBubble : SerializedMonoBehaviour
 
     [SerializeField] private Image _bubble;
     [SerializeField]
-    private Dictionary<DialogText.SpeakerType, Color> _bubbleColors;
+    private Dictionary<DialogText.SpeakerType, Sprite> _bubbleSprites;
 
     [SerializeField]
     private CanvasGroup _group;
@@ -60,7 +60,7 @@ public class DialogBubble : SerializedMonoBehaviour
         if (_currentTween != null)
             _currentTween.Kill();
         _DialogText.text = "";
-        _bubble.color = _bubbleColors[speakerType];
+        _bubble.sprite = _bubbleSprites[speakerType];
         _currentTween = _DialogText.DOText(text, 10.0f)
             .SetSpeedBased(true)
             .OnComplete(() =>
