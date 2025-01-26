@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsPearls_Citron_0: 6320452267975035447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

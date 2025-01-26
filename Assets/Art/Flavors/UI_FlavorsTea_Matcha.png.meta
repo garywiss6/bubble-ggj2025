@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsTea_Matcha_0: -5003410510149682957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

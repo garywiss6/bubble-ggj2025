@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsMilk_Cow_0: 2718242332718166142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
+  m_Name: C1_1_Enter
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _Dialogs:
+  - speaker: 1
+    message: 'Don''t see it that way. See, on my everyday life, I''m just a watcher
+      on
+
+      the farms. Verifying that chickens are okay, and foxes are not around.
+
+      But
+      now, the roles are reversed ! The chickens are the hunters, and the foxes,
+
+      the
+      preys ! Isn''t that exciting ?'
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: I don't really like to see the natural order of thing torn to pieces.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Right. But hey, nothing can't the same forever ! Changes can be good,
+      you know.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: If you say so. What would you like to order sir ?
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Yes, I'd like a "DRINK", please.
+    hasChoice: 0
+    choices: []

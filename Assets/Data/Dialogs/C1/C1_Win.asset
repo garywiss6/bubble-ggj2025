@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a08c3f407f10aa4bb36538162f8437d, type: 3}
+  m_Name: C1_Win
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _Dialogs:
+  - speaker: 1
+    message: 'Oh, man... That''s okay. I believe in me, believing that you can do
+      a better one !
+
+      But maybe not today.'
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: I'm sorry. Maybe the stress of war is getting to me a bit too much.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: Maybe. But don't worry too much ; I pretty sure the war will end soon,
+      Thanks to me ! I hope.
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: I hope so too, sir.
+    hasChoice: 0
+    choices: []
+  - speaker: 1
+    message: At last, I must go. Good day !
+    hasChoice: 0
+    choices: []
+  - speaker: 0
+    message: Good day, sir.
+    hasChoice: 0
+    choices: []

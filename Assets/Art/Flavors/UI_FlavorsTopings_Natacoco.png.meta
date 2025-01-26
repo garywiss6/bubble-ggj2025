@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsTopings_Natacoco_0: 2594403383852153234
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

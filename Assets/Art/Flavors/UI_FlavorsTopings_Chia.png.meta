@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsTopings_Chia_0: -3392845768112535357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

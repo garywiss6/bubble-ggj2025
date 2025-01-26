@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_FlavorsMilk_Coconut_0: 2079114827686867027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
