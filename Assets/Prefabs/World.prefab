@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1635991756, guid: 7e94b268815eca947b4bdd3dc34d090b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -367,6 +367,8 @@ MonoBehaviour:
   _Cup: {fileID: 6202808770843469551}
   _Tea: {fileID: 2425635079011429294}
   _Liquid: {fileID: 3318648994094600279}
+  _Seal: {fileID: 7097252537798051543}
+  _Straw: {fileID: 6037280044804779025}
   _BubblePrefab: {fileID: 2965275597828386517, guid: 8bbc17aac0fd7ef46936a70b020487ec, type: 3}
 --- !u!1 &7306259888921187299
 GameObject:
@@ -443,7 +445,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 65d2d244b3484a44eb1b9d479487d61f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -531,8 +533,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6668988050073909555, guid: 0e1fa4cf2f34f0a49b8abd8100176fcd, type: 3}
   m_PrefabInstance: {fileID: 7649658074007355640}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &6037280044804779025 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4170809669264927977, guid: 0e1fa4cf2f34f0a49b8abd8100176fcd, type: 3}
+  m_PrefabInstance: {fileID: 7649658074007355640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6202808770843469551 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4340844193344988695, guid: 0e1fa4cf2f34f0a49b8abd8100176fcd, type: 3}
+  m_PrefabInstance: {fileID: 7649658074007355640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7097252537798051543 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 601101811140068911, guid: 0e1fa4cf2f34f0a49b8abd8100176fcd, type: 3}
   m_PrefabInstance: {fileID: 7649658074007355640}
   m_PrefabAsset: {fileID: 0}

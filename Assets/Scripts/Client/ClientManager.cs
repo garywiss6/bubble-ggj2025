@@ -52,6 +52,13 @@ public class ClientManager : MonoBehaviour
         DialogManager.Instance.LaunchDialog(CurrentClient.WelcomeDialog);
     }
 
+    public void TakeASip()
+    {
+        _Renderer.sprite = CurrentClient.SipSprite;
+        _HandRenderer.sprite = CurrentClient.SipHand;
+        _HandRenderer.color = Color.white;
+    }
+
     void OnDialogFinished()
     {
         OnClientFinishWelcome?.Invoke();

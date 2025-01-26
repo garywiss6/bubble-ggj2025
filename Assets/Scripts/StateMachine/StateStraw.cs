@@ -5,9 +5,10 @@ public class StateStraw : AState
     public override void OnEnter()
     {
         base.OnEnter();
-        //Show Straw MiniGame Here
+        //Show Straw MiniGame Here (non)
+        PhysicsCupManager.Instance.StrawInTheCup();
         BubbleTeaManager.Instance.BubbleTea.AddStraw();
-        OnStrawPut(); // Ligne de debug a remplacer par le mini jeu
+        //OnStrawPut(); // Ligne de debug a remplacer par le mini jeu
     }
 
     public override void OnExit()
@@ -18,6 +19,6 @@ public class StateStraw : AState
 
     private void OnStrawPut()
     {
-        StateManager.Instance.ChangeState(new StateGiveBubbleTea());
+        //StateManager.Instance.ChangeState(new StateGiveBubbleTea());
     }
 }

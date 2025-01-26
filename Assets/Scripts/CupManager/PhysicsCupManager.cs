@@ -13,6 +13,8 @@ public class PhysicsCupManager : MonoBehaviour
     [SerializeField] private GameObject _Cup;
     [SerializeField] private GameObject _Tea;
     [SerializeField] private GameObject _Liquid;
+    [SerializeField] private SpriteRenderer _Seal;
+    [SerializeField] private SpriteRenderer _Straw;
 
     [SerializeField] private GameObject _BubblePrefab;
 
@@ -79,5 +81,28 @@ public class PhysicsCupManager : MonoBehaviour
         seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
         seq.AppendCallback(() => { StateManager.Instance.ChangeState(new StateExtraSelection());});
+    }
+
+    public void StrawInTheCup()
+    {
+        
+        IngredientBench.Instance.Hide();
+        Sequence seq = DOTween.Sequence();
+        seq.Append(_Cup.transform.DOMoveX(0, 1.0f));
+        seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
+        seq.Append(_Seal.DOFade(1, 0.8f));
+        seq.Append(_Seal.transform.DOMoveY(1.5f, 0.8f));
+        seq.Append(_Straw.DOFade(1, 0.8f));
+        seq.Append(_Straw.transform.DOMoveY(1.2f, 0.8f));
+        seq.AppendInterval(0.8f);
+        seq.AppendCallback(() => { StateManager.Instance.ChangeState(new StateGiveBubbleTea());});
+    }
+
+
+    public void GiveBubbleTea()
+    {
+        Sequence seq = DOTween.Sequence();
+        seq.Append(_Cup.transform.DOMove(new Vector3(4.65f, 0.5f, 0), 1.0f));
+        seq.Join(_Cup.transform.DOScale(Vector3.one * 1.0f, 0.5f));
     }
 }
