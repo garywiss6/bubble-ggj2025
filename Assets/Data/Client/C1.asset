@@ -12,13 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43659e1fcd25a6b49aedf982e6710100, type: 3}
   m_Name: C1
   m_EditorClassIdentifier: 
-  _WelcomeSprite: {fileID: -1023485770, guid: 78c5ca35f62c1cf479aef40168d22878, type: 3}
-  _TalkSprite: {fileID: 1931474131, guid: 78c5ca35f62c1cf479aef40168d22878, type: 3}
-  _SipSprite: {fileID: 603486539, guid: 78c5ca35f62c1cf479aef40168d22878, type: 3}
-  _SipHand: {fileID: 21300000, guid: 5559398bf9d29c0488b5edb9bc6c9c0d, type: 3}
-  _HappySprite: {fileID: 0}
-  _HappyHand: {fileID: 0}
-  _requestData: {fileID: 11400000, guid: ce5b73d55f89a374d8bb44e0e0ddc1fd, type: 2}
+  _controller: {fileID: 9100000, guid: cc78d21d6316f5145a591854b9beec5a, type: 2}
+  _requestData: {fileID: 11400000, guid: 103707ac7e02cdf4498f27ef52fab5b9, type: 2}
   _welcomeDialog: {fileID: 11400000, guid: 9a26bb6db02b69546a618ecfd29f2740, type: 2}
   _successDialog: {fileID: 11400000, guid: c0baa6190bf657049955e998fe881f1d, type: 2}
   _failedDialog: {fileID: 11400000, guid: 4877d6a3f08ab9146932b65935d6ad0c, type: 2}

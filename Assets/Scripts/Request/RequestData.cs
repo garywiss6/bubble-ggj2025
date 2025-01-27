@@ -26,7 +26,7 @@ public class RequestData : ScriptableObject
         unaccuracy += Mathf.Abs(_sugar - tea.Sugar);
         unaccuracy += Mathf.Abs(_fruit - tea.Fruit);
         
-        score += (int)(100 - (unaccuracy / 45 * 100));
+        score += (int)(100 - (unaccuracy / 35 * 100));
 
         return score >= _exigence;
     }

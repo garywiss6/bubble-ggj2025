@@ -57,11 +57,15 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
     public void OnFirstChoice()
     {
         LaunchDialog(_currentDialog.Dialogs[_currentIndex].choices[0].response);
+        _choices.alpha = 0;
+        _choices.interactable = false;
     }
     
     public void OnSecondChoice()
     {
         LaunchDialog(_currentDialog.Dialogs[_currentIndex].choices[1].response);
+        _choices.alpha = 0;
+        _choices.interactable = false;
     }
 
     public void LaunchDialog(DialogData dialogData)
@@ -80,7 +84,7 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
         {
             _firstChoice.text = _currentDialog.Dialogs[_currentIndex].choices[0].message;
             _secondChoice.text = _currentDialog.Dialogs[_currentIndex].choices[1].message;
-            _choices.DOFade(1, 0.8f).OnComplete(() => {_choices.interactable = true;});
+            _choices.DOFade(1, 0.5f).OnComplete(() => {_choices.interactable = true;});
         }
         else
         {
@@ -90,13 +94,15 @@ public class DialogManager : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (_currentDialog != null && _currentIndex < _currentDialog.Dialogs.Count && !_currentDialog.Dialogs[_currentIndex].hasChoice)
+        if (_currentDialog != null && _currentIndex < _currentDialog.Dialogs.Count)
         {
             if (_dialogBubble.IsTweening)
             {
                 _dialogBubble.SkipTextTyping();
                 return;
             }
+            if (_currentDialog.Dialogs[_currentIndex].hasChoice)
+                return;
             _choices.alpha = 0;
             _choices.interactable = false;
             _finishCursor.color = Color.clear;

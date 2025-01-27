@@ -32,7 +32,7 @@ public class ClientManager : MonoBehaviour
     
 
     //Yolo
-    private ClientData CurrentClient 
+    public ClientData CurrentClient 
     {
         get  {return _ClientList[_CurrentClient];}
     }
@@ -46,6 +46,7 @@ public class ClientManager : MonoBehaviour
         _Renderer.material.SetFloat("_Fill", 0);
         _HandRenderer.material.SetFloat("_Fill", 0);
         ClientAnimator.Instance._trigger += EnterClientFinished;
+        ClientAnimator.Instance.SetController(CurrentClient.Controller);
         ClientAnimator.Instance.Trigger();
     }
 
@@ -69,36 +70,10 @@ public class ClientManager : MonoBehaviour
         DialogManager.Instance.LaunchDialog(CurrentClient.SuccessDialog);
     }
 
-
-    public void DefaultSprite()
-    {
-        _Renderer.sprite = CurrentClient.WelcomeSprite;
-    }
-
-    public void TalkSprite()
-    {
-        _Renderer.sprite = CurrentClient.TalkSprite;
-    }
-    
-    public void HappySprite()
-    {
-        _Renderer.sprite = CurrentClient.HappySprite;
-        _HandRenderer.sprite = CurrentClient.HappyHand;
-        _HandRenderer.color = Color.white;
-    }
-    
-    public void TakeASip()
-    {
-        _Renderer.sprite = CurrentClient.SipSprite;
-        _HandRenderer.sprite = CurrentClient.SipHand;
-        _HandRenderer.color = Color.white;
-        ClientAnimator.Instance.TakeASip();
-    }
-
     public void FillClient(float time, float percent)
     {
         float tw = 0;
-        DOTween.To(() => tw, x => tw = x, percent, time)
+        DOTween.To(() => tw, x => tw = x, percent, time).SetEase(Ease.InQuad)
             .OnUpdate(() =>
             {
                 _Renderer.material.SetFloat("_Fill", tw);

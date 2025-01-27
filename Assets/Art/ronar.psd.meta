@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: f27d0b4dd731e4748b40952d064b414f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6334964054564667929
+    second: ronar_0
+  - first:
+      213: -5643177458097201687
+    second: ronar_1
+  - first:
+      213: 6045639999917515245
+    second: ronar_2
+  - first:
+      213: 5423225488193546330
+    second: ronar_3
+  - first:
+      213: 3717714314230190444
+    second: ronar_4
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ronar_happy_open
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 438
+        width: 510
+        height: 550
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edfdc6a1cfa518a0800000000000000
+      internalID: -6334964054564667929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ronar_happy_close
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 37
+        width: 510
+        height: 550
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -255, y: 101}
+        - {x: -255, y: -275}
+        - {x: 255, y: -275}
+        - {x: 255, y: 76}
+        - {x: 187, y: 275}
+        - {x: -147.5, y: 274.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eddf9d20086fa1b0800000000000000
+      internalID: -5643177458097201687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ronar_sad_open
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 430
+        width: 510
+        height: 550
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -255, y: -275}
+        - {x: 200, y: -275}
+        - {x: 255, y: -156}
+        - {x: 255, y: 275}
+        - {x: -255, y: 275}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1e9fa7c8d66e350800000000000000
+      internalID: 6045639999917515245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ronar_sad_close
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 45
+        width: 510
+        height: 550
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -255, y: 35}
+        - {x: -255, y: -275}
+        - {x: 255, y: -275}
+        - {x: 255, y: 275}
+        - {x: -132, y: 275}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58ee9819da234b40800000000000000
+      internalID: 5423225488193546330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f96f4e6801d106d448db3ad251019d31
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ronar_4: 3717714314230190444
+      ronar_happy_close: -5643177458097201687
+      ronar_happy_open: -6334964054564667929
+      ronar_sad_close: 5423225488193546330
+      ronar_sad_open: 6045639999917515245
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,5 +21,6 @@ public class StateClientArrival : AState
     public override void OnExit()
     {
         base.OnExit();
+        RequestManager.Instance.AddRequest(ClientManager.Instance.CurrentClient.RequestData);
     }
 }

@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class ClientAnimator : SingletonBehaviour<ClientAnimator>
@@ -9,14 +10,15 @@ public class ClientAnimator : SingletonBehaviour<ClientAnimator>
         _animator.SetInteger("InteractionState", state);
     }
 
-    public void DefaultSprite()
+    public void SetTalk(bool state)
     {
-        ClientManager.Instance.DefaultSprite();
+        _animator.SetBool("IsTalking", state);
     }
-    
-    public void TalkSprite()
+
+    public void SetController(AnimatorController controller)
     {
-        ClientManager.Instance.TalkSprite();
+        _animator.runtimeAnimatorController = controller;
+        SetState(1);
     }
 
     public void Trigger()
@@ -26,7 +28,8 @@ public class ClientAnimator : SingletonBehaviour<ClientAnimator>
 
     public void TakeASip()
     {
-        _animator.SetTrigger("Sip");
+        SetState(2);
+        SetTalk(false);
     }
 
     public void OnArrival()

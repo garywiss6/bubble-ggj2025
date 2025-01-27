@@ -45,8 +45,10 @@ public class PhysicsCupManager : MonoBehaviour
         _Seal.transform.DOLocalMoveY(2.5f, 0.1f);
         _Straw.transform.DOLocalMoveY(5, 0.1f);
         Sequence seq = DOTween.Sequence();
-        seq.Append(_Cup.transform.DOMoveX(-6, 1.0f));
+        seq.Append(_Cup.transform.DOMoveX(-10, 1.0f));
+        seq.Join(_Cup.transform.DOMoveY(0, 1.0f));
         seq.Join(_Cup.transform.DOScale(Vector3.one * 0.5f, 0.5f));
+        seq.AppendCallback(() => { _Cup.SetActive(false); });
     }
 
     public async void FillBobaCup(IngredientData bubble)
@@ -148,7 +150,7 @@ public class PhysicsCupManager : MonoBehaviour
         seq.AppendInterval(1.0f);
         seq.Append(_Tea.transform.DOMoveY(-3.5f, 3.0f).SetEase(Ease.OutCirc));
         seq.Join(_Liquid.transform.DOMoveY(-3.5f, 3.0f).SetEase(Ease.OutCirc));
-        seq.JoinCallback(() => { ClientManager.Instance.FillClient(0.8f, 3.0f); });
+        seq.JoinCallback(() => { ClientManager.Instance.FillClient(3.0f, 5.0f); });
         int i = 0;
         foreach (PhysicsBubble b in _Cup.GetComponentsInChildren<PhysicsBubble>())
         {

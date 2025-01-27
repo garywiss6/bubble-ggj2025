@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091ad7f80d19ff34eb0b1202d0541903, type: 3}
   m_Name: C1_Request
   m_EditorClassIdentifier: 
-  _exigence: 90
-  _cupSize: 1
-  _acidity: 6
-  _sugar: 10
-  _fruit: 2
+  _exigence: 80
+  _cupSize: 0
+  _acidity: 12
+  _sugar: 2
+  _fruit: 5

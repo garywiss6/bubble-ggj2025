@@ -8,7 +8,7 @@ public class StateGiveBubbleTea : AState
         //Play fill anim on customer
         PhysicsCupManager.Instance.OnSip += OnBubbleTeaSipped;
         PhysicsCupManager.Instance.GiveBubbleTea();
-        ClientManager.Instance.TakeASip();
+        ClientAnimator.Instance.TakeASip();
     }
 
     public void OnBubbleTeaSipped()
@@ -18,9 +18,15 @@ public class StateGiveBubbleTea : AState
         ClientManager.Instance.OnClientFinishWelcome += FinishDialog;
         ClientAnimator.Instance._trigger += ClientLeaveEnd;
         if (!answerRequest)
+        {
+            ClientAnimator.Instance.SetState(1);
             ClientManager.Instance.ClientLoseDialog();
+        }
         else
+        {
+            ClientAnimator.Instance.SetState(2);
             ClientManager.Instance.ClientWinDialog();
+        }
         BubbleTeaManager.Instance.HideTooltip();
         PhysicsCupManager.Instance.OnSip -= OnBubbleTeaSipped;
     }

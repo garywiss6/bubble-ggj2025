@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class StateCupSelection : AState
 {
-    public override void OnEnter()
+    public async override void OnEnter()
     {
         base.OnEnter();
         IngredientBench.Instance.PopulateCup();
+        await Awaitable.WaitForSecondsAsync(.5f);
         CupManager.Instance.Populate(OnSelectCup);
     }
 
