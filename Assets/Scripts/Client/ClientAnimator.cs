@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class ClientAnimator : SingletonBehaviour<ClientAnimator>
@@ -15,7 +14,7 @@ public class ClientAnimator : SingletonBehaviour<ClientAnimator>
         _animator.SetBool("IsTalking", state);
     }
 
-    public void SetController(AnimatorController controller)
+    public void SetController(AnimatorOverrideController controller)
     {
         _animator.runtimeAnimatorController = controller;
         SetState(1);

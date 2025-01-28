@@ -1,12 +1,11 @@
 using Sirenix.OdinInspector;
-using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ClientData", menuName = "Scriptable Objects/ClientData")]
 public class ClientData : ScriptableObject
 {
-    [SerializeField] private AnimatorController _controller;
-    public AnimatorController Controller => _controller;
+    [SerializeField] private AnimatorOverrideController _controller;
+    public AnimatorOverrideController Controller => _controller;
 
     [SerializeField] private RequestData _requestData;
     public RequestData RequestData => _requestData;

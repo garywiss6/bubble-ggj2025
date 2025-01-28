@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43659e1fcd25a6b49aedf982e6710100, type: 3}
   m_Name: C1
   m_EditorClassIdentifier: 
-  _controller: {fileID: 9100000, guid: cc78d21d6316f5145a591854b9beec5a, type: 2}
+  _controller: {fileID: 22100000, guid: e88b084036fc03b4eac678889f67de5f, type: 2}
   _requestData: {fileID: 11400000, guid: 103707ac7e02cdf4498f27ef52fab5b9, type: 2}
   _welcomeDialog: {fileID: 11400000, guid: 9a26bb6db02b69546a618ecfd29f2740, type: 2}
   _successDialog: {fileID: 11400000, guid: c0baa6190bf657049955e998fe881f1d, type: 2}
